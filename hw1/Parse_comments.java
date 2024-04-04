@@ -15,7 +15,10 @@ public class Parse {
         Scanner scanner = new Scanner(System.in);
         input = scanner.nextLine();
         input = input.replaceAll("\\s+", "");
+        System.out.println("input: " + input);
         index = 0;
+        // token = nextToken();
+        // System.out.println("token at start!!!: " + token);
         goal();
     }
 
@@ -25,16 +28,22 @@ public class Parse {
         }
         
         char c = input.charAt(index++);
+        System.out.println("c: " + c);
         switch (c) {
             case '{': return Token.LEFT_BRACE;
             case '}': return Token.RIGHT_BRACE;
             case ';': return Token.SEMICOLON;
             case 'S': // Assuming "System.out.println"
                 if (index + 17 <= input.length() && input.substring(index - 1, index + 17).equals("System.out.println")) {
+                    System.out.println("i got here!!!");
                     index += 17;
                     return Token.PRINTLN;
                 }
                 else {
+                    System.out.println("oh no");
+                    System.out.println("input len " + input.length());
+                    System.out.println(index + 17);
+                    System.out.println("substring: " + input.substring(index - 1, index + 16));
                     break;
                 }
             case '(': return Token.LEFT_PAREN;
@@ -75,8 +84,12 @@ public class Parse {
     }
 
     static void eat(Token expected) {
+        System.out.println("in eat");
+        System.out.println("token: " + token);
+        System.out.println("expected: " + expected);
         if (token == expected) {
             token = nextToken();
+            System.out.println("match, new token is: " + token);
         } else {
             error();
         }
@@ -88,8 +101,14 @@ public class Parse {
     }
 
     static void goal() { // goal symbols are the terminal symbols
+        System.out.println("got to goal");
         token = nextToken();
+        System.out.println("token at start: " + token);
         S(); // <- S is the start symbol
+        System.out.println("got here");
+        // System.out.println("token at end: " + token);
+        // token = nextToken();
+        // System.out.println("token incremented: " + token);
         eat(Token.EOF); 
         System.out.println("Program parsed successfully");
         System.exit(0);
@@ -97,8 +116,12 @@ public class Parse {
 
     // S ::= { L } | System.out.println ( E ) ; | if ( E ) S else S | while ( E ) S
     static void S() {
+        System.out.println("got to S");
+        System.out.println(token);
         if(token == Token.LEFT_BRACE) {
+            System.out.println("im here");
             eat(Token.LEFT_BRACE);
+            System.out.println("going to L");
             L();
             eat(Token.RIGHT_BRACE);
         }
@@ -132,7 +155,9 @@ public class Parse {
 
     // L ::= S L | ϵ
     static void L() {
+        System.out.println("im in L");
         if (token == Token.LEFT_BRACE || token == Token.PRINTLN || token == Token.IF || token == Token.WHILE) { // basically what S can match
+            System.out.println("im in here");
             S(); // parse statement S
             L(); // recursively parse list L
         }
@@ -141,6 +166,8 @@ public class Parse {
 
     // E ::= true | false | ! E
     static void E() {
+        System.out.println("got to E");
+        System.out.println("token: " + token);
         if(token == Token.TRUE) {
             eat(Token.TRUE);
         }
