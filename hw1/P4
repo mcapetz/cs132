@@ -1,0 +1,5 @@
+// Test cases for S productions
+{ System.out.println(!false); }
+System.out.println(true);
+if (true) { System.out.println(true); } else { System.out.println(true); }
+while (true) { System.out.println(true); }

@@ -1,0 +1,38 @@
+// Test cases for S productions
+{ System.out.println(true); }
+System.out.println(true);
+if (true) { System.out.println(true); } else { System.out.println(true); }
+while (true) { System.out.println(true); }
+while (true) System.out.println(true);
+
+// Test cases for L productions
+{ System.out.println(true); System.out.println(true); }
+System.out.println(true); System.out.println(true);
+if (true) { System.out.println(true); } else { System.out.println(true); } System.out.println(true);
+while (true) { System.out.println(true); System.out.println(true); }
+
+
+// Test cases for E productions should fail
+true
+false
+!true
+!false
+!!true
+!!false
+
+// Test cases for mixed productions should succeed
+if (!true) { System.out.println(true); } else { while (false) { System.out.println(true); } }
+{ while (!false) { if (!true) { System.out.println(true); } else { System.out.println(true); } } }
+System.out.println(!false);
+
+// Test cases for failing S productions
+System.out.println(true); System.out.println(true);
+if (true) { System.out.println(true); } else { System.out.println(true); } else { System.out.println(true); }
+
+// Test cases for failing L productions
+System.out.println(true); if (true) { System.out.println(true); }
+{ System.out.println(true); } while (true) { System.out.println(true); }
+
+// Test cases for failing mixed productions
+if true { System.out.println(true); }
+{ System.out.println(true); } while (true) { System.out.println(true); }
