@@ -1,7 +1,9 @@
 import subprocess
 
 # Define the command to run the parser
-parser_command = ["java", "Parse"]
+parser_command = ["java", "claireParse"]
+
+print("claire")
 
 # Read the test cases from the P file
 with open("P", "r") as file:

@@ -1,0 +1,80 @@
+claire
+// Test cases for S productions
+Test case 2: { System.out.println(true); }
+=> Passed
+
+Test case 3: System.out.println(true);
+=> Passed
+
+Test case 4: if (true) { System.out.println(true); } else { System.out.println(true); }
+=> Passed
+
+Test case 5: while (true) { System.out.println(true); }
+=> Passed
+
+Test case 6: while (true) System.out.println(true);
+=> Passed
+
+// Test cases for L productions
+Test case 9: { System.out.println(true); System.out.println(true); }
+=> Passed
+
+Test case 10: System.out.println(true); System.out.println(true);
+=> Failed
+
+Test case 11: if (true) { System.out.println(true); } else { System.out.println(true); } System.out.println(true);
+=> Failed
+
+Test case 12: while (true) { System.out.println(true); System.out.println(true); }
+=> Passed
+
+// Test cases for E productions should fail
+Test case 16: true
+=> Failed
+
+Test case 17: false
+=> Failed
+
+Test case 18: !true
+=> Failed
+
+Test case 19: !false
+=> Failed
+
+Test case 20: !!true
+=> Failed
+
+Test case 21: !!false
+=> Failed
+
+// Test cases for mixed productions should succeed
+Test case 24: if (!true) { System.out.println(true); } else { while (false) { System.out.println(true); } }
+=> Passed
+
+Test case 25: { while (!false) { if (!true) { System.out.println(true); } else { System.out.println(true); } } }
+=> Passed
+
+Test case 26: System.out.println(!false);
+=> Passed
+
+// Test cases for failing S productions
+Test case 29: System.out.println(true); System.out.println(true);
+=> Failed
+
+Test case 30: if (true) { System.out.println(true); } else { System.out.println(true); } else { System.out.println(true); }
+=> Failed
+
+// Test cases for failing L productions
+Test case 33: System.out.println(true); if (true) { System.out.println(true); }
+=> Failed
+
+Test case 34: { System.out.println(true); } while (true) { System.out.println(true); }
+=> Failed
+
+// Test cases for failing mixed productions
+Test case 37: if true { System.out.println(true); }
+=> Failed
+
+Test case 38: { System.out.println(true); } while (true) { System.out.println(true); }
+=> Failed
+

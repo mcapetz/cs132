@@ -8,30 +8,42 @@ public class Parse {
     }
 
     static Token token;
-    static String input;
+    static String inputString;
     static int index;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        input = scanner.nextLine();
-        input = input.replaceAll("\\s+", "");
+        StringBuilder input = new StringBuilder();
+        while(scanner.hasNextLine()) {
+            input.append(scanner.nextLine());
+            input.append("\n");
+        }
+        inputString = input.toString();
+        inputString = inputString.replaceAll("\\s+", "");
         index = 0;
         goal();
     }
 
+
     static Token nextToken() {
-        if (index >= input.length()) {
+
+        inputString = inputString.trim();
+        
+        if (index >= inputString.length()) {
             return Token.EOF;
         }
         
-        char c = input.charAt(index++);
+        char c = inputString.charAt(index++);
+        // System.out.println("C: " + c);
         switch (c) {
             case '{': return Token.LEFT_BRACE;
             case '}': return Token.RIGHT_BRACE;
             case ';': return Token.SEMICOLON;
             case 'S': // Assuming "System.out.println"
-                if (index + 17 <= input.length() && input.substring(index - 1, index + 17).equals("System.out.println")) {
+                if (index + 17 <= inputString.length() && inputString.substring(index - 1, index + 17).equals("System.out.println")) {
                     index += 17;
+                    // System.out.println("consumed the print");
+                    // System.out.println(inputString.substring(index));
                     return Token.PRINTLN;
                 }
                 else {
@@ -40,31 +52,31 @@ public class Parse {
             case '(': return Token.LEFT_PAREN;
             case ')': return Token.RIGHT_PAREN;
             case 'i': // Assuming "if"
-                if (index + 1 <= input.length() && input.substring(index - 1, index + 1).equals("if")) {
+                if (index + 1 <= inputString.length() && inputString.substring(index - 1, index + 1).equals("if")) {
                     index++;
                     return Token.IF;
                 }
                 break;
             case 'e': // Assuming "else"
-                if (index + 3 <= input.length() && input.substring(index - 1, index + 3).equals("else")) {
+                if (index + 3 <= inputString.length() && inputString.substring(index - 1, index + 3).equals("else")) {
                     index += 3;
                     return Token.ELSE;
                 }
                 break;
             case 'w': // Assuming "while"
-                if (index + 4 <= input.length() && input.substring(index - 1, index + 4).equals("while")) {
+                if (index + 4 <= inputString.length() && inputString.substring(index - 1, index + 4).equals("while")) {
                     index += 4;
                     return Token.WHILE;
                 }
                 break;
             case 't': // Assuming "true"
-                if (index + 3 <= input.length() && input.substring(index - 1, index + 3).equals("true")) {
+                if (index + 3 <= inputString.length() && inputString.substring(index - 1, index + 3).equals("true")) {
                     index += 3;
                     return Token.TRUE;
                 }
                 break;
             case 'f': // Assuming "false"
-                if (index + 4 <= input.length() && input.substring(index - 1, index + 4).equals("false")) {
+                if (index + 4 <= inputString.length() && inputString.substring(index - 1, index + 4).equals("false")) {
                     index += 4;
                     return Token.FALSE;
                 }
