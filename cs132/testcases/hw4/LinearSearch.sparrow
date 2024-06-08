@@ -1,0 +1,245 @@
+func main()
+id1 = 12
+id0 = alloc(id1)
+if0 id0 goto null_err
+id1 = 16
+LSvmt = alloc(id1)
+if0 LSvmt goto null_err
+id2 = @LSPrint
+[LSvmt + 0] = id2
+id3 = @LSInit
+[LSvmt + 4] = id3
+id4 = @LSStart
+[LSvmt + 8] = id4
+id5 = @LSSearch
+[LSvmt + 12] = id5
+[id0 + 0] = LSvmt
+if0 id0 goto null_err
+id6 = [id0 + 0]
+id6 = [id6 + 8]
+id8 = 10
+id7 = call id6(id0 id8)
+print(id7)
+goto main_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+main_end:
+id9 = 0
+      return id9
+
+func LSStart(this id10)
+if0 this goto null_err
+id13 = [this + 0]
+id13 = [id13 + 4]
+id14 = call id13(this id10)
+id11 = id14
+if0 this goto null_err
+id15 = [this + 0]
+id15 = [id15 + 0]
+id16 = call id15(this)
+id12 = id16
+id17 = 9999
+print(id17)
+if0 this goto null_err
+id18 = [this + 0]
+id18 = [id18 + 12]
+id20 = 8
+id19 = call id18(this id20)
+print(id19)
+if0 this goto null_err
+id21 = [this + 0]
+id21 = [id21 + 12]
+id23 = 12
+id22 = call id21(this id23)
+print(id22)
+if0 this goto null_err
+id24 = [this + 0]
+id24 = [id24 + 12]
+id26 = 17
+id25 = call id24(this id26)
+print(id25)
+if0 this goto null_err
+id27 = [this + 0]
+id27 = [id27 + 12]
+id29 = 50
+id28 = call id27(this id29)
+print(id28)
+id30 = 55
+goto LSStart_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+LSStart_end:
+      return id30
+
+func LSPrint(this)
+id32 = 1
+id31 = id32
+loopid33:
+id35 = [this + 8]
+id34 = id31 < id35
+if0 id34 goto endid33
+id37 = [this + 4]
+if0 id37 goto null_err
+id38 = [id37 + 0]
+id39 = 1
+id40 = 0
+id40 = id40 - id39
+id41 = id40 < id31
+if0 id41 goto array_err
+id41 = id31 < id38
+if0 id41 goto array_err
+id42 = 4
+id43 = id31 + id39
+id43 = id43 * id42
+id44 = id37 + id43
+id36 = [id44 + 0]
+print(id36)
+id46 = 1
+id45 = id31 + id46
+id31 = id45
+goto loopid33
+endid33:
+id47 = 0
+goto LSPrint_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+LSPrint_end:
+      return id47
+
+func LSSearch(this id48)
+id55 = 1
+id49 = id55
+id56 = 0
+id50 = id56
+id57 = 0
+id51 = id57
+loopid58:
+id60 = [this + 8]
+id59 = id49 < id60
+if0 id59 goto endid58
+id62 = [this + 4]
+if0 id62 goto null_err
+id63 = [id62 + 0]
+id64 = 1
+id65 = 0
+id65 = id65 - id64
+id66 = id65 < id49
+if0 id66 goto array_err
+id66 = id49 < id63
+if0 id66 goto array_err
+id67 = 4
+id68 = id49 + id64
+id68 = id68 * id67
+id69 = id62 + id68
+id61 = [id69 + 0]
+id52 = id61
+id71 = 1
+id70 = id48 + id71
+id53 = id70
+id72 = id52 < id48
+if0 id72 goto elseid72
+id73 = 0
+id54 = id73
+goto endid72
+elseid72:
+id75 = id52 < id53
+id76 = 1
+id74 = id76 - id75
+if0 id74 goto elseid74
+id77 = 0
+id54 = id77
+goto endid74
+elseid74:
+id78 = 1
+id50 = id78
+id79 = 1
+id51 = id79
+id80 = [this + 8]
+id49 = id80
+endid74:
+endid72:
+id82 = 1
+id81 = id49 + id82
+id49 = id81
+goto loopid58
+endid58:
+goto LSSearch_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+LSSearch_end:
+      return id51
+
+func LSInit(this id83)
+id88 = [this + 8]
+[this + 8] = id83
+id89 = [this + 4]
+id91 = 0
+id92 = id83 < id91
+id91 = 1
+id92 = id91 - id92
+if0 id92 goto array_err
+id93 = id83 + id91
+id91 = 4
+id93 = id91 * id93
+id90 = alloc(id93)
+if0 id90 goto null_err
+[id90 + 0] = id83
+[this + 4] = id90
+id94 = 1
+id84 = id94
+id96 = [this + 8]
+id97 = 1
+id95 = id96 + id97
+id85 = id95
+loopid98:
+id100 = [this + 8]
+id99 = id84 < id100
+if0 id99 goto endid98
+id102 = 2
+id101 = id102 * id84
+id86 = id101
+id104 = 3
+id103 = id85 - id104
+id87 = id103
+id105 = [this + 4]
+id106 = id86 + id87
+if0 id105 goto null_err
+id107 = [id105 + 0]
+id108 = 1
+id109 = 0
+id109 = id109 - id108
+id110 = id109 < id84
+if0 id110 goto array_err
+id110 = id84 < id107
+if0 id110 goto array_err
+id111 = 4
+id112 = id84 + id108
+id112 = id112 * id111
+id113 = id105 + id112
+[id113 + 0] = id106
+id115 = 1
+id114 = id84 + id115
+id84 = id114
+id117 = 1
+id116 = id85 - id117
+id85 = id116
+goto loopid98
+endid98:
+id118 = 0
+goto LSInit_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+LSInit_end:
+      return id118
+
+

@@ -1,0 +1,913 @@
+func main()
+id1 = 4
+id0 = alloc(id1)
+if0 id0 goto null_err
+id1 = 4
+BTvmt = alloc(id1)
+if0 BTvmt goto null_err
+id2 = @BTStart
+[BTvmt + 0] = id2
+[id0 + 0] = BTvmt
+if0 id0 goto null_err
+id3 = [id0 + 0]
+id3 = [id3 + 0]
+id4 = call id3(id0)
+print(id4)
+goto main_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+main_end:
+id5 = 0
+      return id5
+
+func BTStart(this)
+id10 = 28
+id9 = alloc(id10)
+if0 id9 goto null_err
+id10 = 80
+Treevmt = alloc(id10)
+if0 Treevmt goto null_err
+id11 = @TreeDelete
+[Treevmt + 0] = id11
+id12 = @TreeSetHas_Left
+[Treevmt + 4] = id12
+id13 = @TreeRemoveLeft
+[Treevmt + 8] = id13
+id14 = @TreeGetKey
+[Treevmt + 12] = id14
+id15 = @TreeSetRight
+[Treevmt + 16] = id15
+id16 = @TreeGetLeft
+[Treevmt + 20] = id16
+id17 = @TreeGetRight
+[Treevmt + 24] = id17
+id18 = @TreeRemove
+[Treevmt + 28] = id18
+id19 = @TreeSetLeft
+[Treevmt + 32] = id19
+id20 = @TreeInsert
+[Treevmt + 36] = id20
+id21 = @TreePrint
+[Treevmt + 40] = id21
+id22 = @TreeInit
+[Treevmt + 44] = id22
+id23 = @TreeGetHas_Right
+[Treevmt + 48] = id23
+id24 = @TreeGetHas_Left
+[Treevmt + 52] = id24
+id25 = @TreeRemoveRight
+[Treevmt + 56] = id25
+id26 = @TreeSearch
+[Treevmt + 60] = id26
+id27 = @TreeSetKey
+[Treevmt + 64] = id27
+id28 = @TreeCompare
+[Treevmt + 68] = id28
+id29 = @TreeSetHas_Right
+[Treevmt + 72] = id29
+id30 = @TreeRecPrint
+[Treevmt + 76] = id30
+[id9 + 0] = Treevmt
+id6 = id9
+if0 id6 goto null_err
+id31 = [id6 + 0]
+id31 = [id31 + 44]
+id33 = 16
+id32 = call id31(id6 id33)
+id7 = id32
+if0 id6 goto null_err
+id34 = [id6 + 0]
+id34 = [id34 + 40]
+id35 = call id34(id6)
+id7 = id35
+id36 = 100000000
+print(id36)
+if0 id6 goto null_err
+id37 = [id6 + 0]
+id37 = [id37 + 36]
+id39 = 8
+id38 = call id37(id6 id39)
+id7 = id38
+if0 id6 goto null_err
+id40 = [id6 + 0]
+id40 = [id40 + 40]
+id41 = call id40(id6)
+id7 = id41
+if0 id6 goto null_err
+id42 = [id6 + 0]
+id42 = [id42 + 36]
+id44 = 24
+id43 = call id42(id6 id44)
+id7 = id43
+if0 id6 goto null_err
+id45 = [id6 + 0]
+id45 = [id45 + 36]
+id47 = 4
+id46 = call id45(id6 id47)
+id7 = id46
+if0 id6 goto null_err
+id48 = [id6 + 0]
+id48 = [id48 + 36]
+id50 = 12
+id49 = call id48(id6 id50)
+id7 = id49
+if0 id6 goto null_err
+id51 = [id6 + 0]
+id51 = [id51 + 36]
+id53 = 20
+id52 = call id51(id6 id53)
+id7 = id52
+if0 id6 goto null_err
+id54 = [id6 + 0]
+id54 = [id54 + 36]
+id56 = 28
+id55 = call id54(id6 id56)
+id7 = id55
+if0 id6 goto null_err
+id57 = [id6 + 0]
+id57 = [id57 + 36]
+id59 = 14
+id58 = call id57(id6 id59)
+id7 = id58
+if0 id6 goto null_err
+id60 = [id6 + 0]
+id60 = [id60 + 40]
+id61 = call id60(id6)
+id7 = id61
+if0 id6 goto null_err
+id62 = [id6 + 0]
+id62 = [id62 + 60]
+id64 = 24
+id63 = call id62(id6 id64)
+print(id63)
+if0 id6 goto null_err
+id65 = [id6 + 0]
+id65 = [id65 + 60]
+id67 = 12
+id66 = call id65(id6 id67)
+print(id66)
+if0 id6 goto null_err
+id68 = [id6 + 0]
+id68 = [id68 + 60]
+id70 = 16
+id69 = call id68(id6 id70)
+print(id69)
+if0 id6 goto null_err
+id71 = [id6 + 0]
+id71 = [id71 + 60]
+id73 = 50
+id72 = call id71(id6 id73)
+print(id72)
+if0 id6 goto null_err
+id74 = [id6 + 0]
+id74 = [id74 + 60]
+id76 = 12
+id75 = call id74(id6 id76)
+print(id75)
+if0 id6 goto null_err
+id77 = [id6 + 0]
+id77 = [id77 + 0]
+id79 = 12
+id78 = call id77(id6 id79)
+id7 = id78
+if0 id6 goto null_err
+id80 = [id6 + 0]
+id80 = [id80 + 40]
+id81 = call id80(id6)
+id7 = id81
+if0 id6 goto null_err
+id82 = [id6 + 0]
+id82 = [id82 + 60]
+id84 = 12
+id83 = call id82(id6 id84)
+print(id83)
+id85 = 0
+goto BTStart_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+BTStart_end:
+      return id85
+
+func TreeInit(this id86)
+id87 = [this + 24]
+[this + 24] = id86
+id88 = [this + 20]
+id89 = 0
+[this + 20] = id89
+id90 = [this + 8]
+id91 = 0
+[this + 8] = id91
+id92 = 1
+goto TreeInit_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeInit_end:
+      return id92
+
+func TreeSetRight(this id93)
+id94 = [this + 16]
+[this + 16] = id93
+id95 = 1
+goto TreeSetRight_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeSetRight_end:
+      return id95
+
+func TreeSetLeft(this id96)
+id97 = [this + 4]
+[this + 4] = id96
+id98 = 1
+goto TreeSetLeft_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeSetLeft_end:
+      return id98
+
+func TreeGetRight(this)
+id99 = [this + 16]
+goto TreeGetRight_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeGetRight_end:
+      return id99
+
+func TreeGetLeft(this)
+id100 = [this + 4]
+goto TreeGetLeft_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeGetLeft_end:
+      return id100
+
+func TreeGetKey(this)
+id101 = [this + 24]
+goto TreeGetKey_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeGetKey_end:
+      return id101
+
+func TreeSetKey(this id102)
+id103 = [this + 24]
+[this + 24] = id102
+id104 = 1
+goto TreeSetKey_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeSetKey_end:
+      return id104
+
+func TreeGetHas_Right(this)
+id105 = [this + 8]
+goto TreeGetHas_Right_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeGetHas_Right_end:
+      return id105
+
+func TreeGetHas_Left(this)
+id106 = [this + 20]
+goto TreeGetHas_Left_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeGetHas_Left_end:
+      return id106
+
+func TreeSetHas_Left(this id107)
+id108 = [this + 20]
+[this + 20] = id107
+id109 = 1
+goto TreeSetHas_Left_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeSetHas_Left_end:
+      return id109
+
+func TreeSetHas_Right(this id110)
+id111 = [this + 8]
+[this + 8] = id110
+id112 = 1
+goto TreeSetHas_Right_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeSetHas_Right_end:
+      return id112
+
+func TreeCompare(this id113 id114)
+id117 = 0
+id115 = id117
+id119 = 1
+id118 = id114 + id119
+id116 = id118
+id120 = id113 < id114
+if0 id120 goto elseid120
+id121 = 0
+id115 = id121
+goto endid120
+elseid120:
+id123 = id113 < id116
+id124 = 1
+id122 = id124 - id123
+if0 id122 goto elseid122
+id125 = 0
+id115 = id125
+goto endid122
+elseid122:
+id126 = 1
+id115 = id126
+endid122:
+endid120:
+goto TreeCompare_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeCompare_end:
+      return id115
+
+func TreeInsert(this id127)
+id134 = 28
+id133 = alloc(id134)
+if0 id133 goto null_err
+id134 = 80
+Treevmt = alloc(id134)
+if0 Treevmt goto null_err
+id135 = @TreeDelete
+[Treevmt + 0] = id135
+id136 = @TreeSetHas_Left
+[Treevmt + 4] = id136
+id137 = @TreeRemoveLeft
+[Treevmt + 8] = id137
+id138 = @TreeGetKey
+[Treevmt + 12] = id138
+id139 = @TreeSetRight
+[Treevmt + 16] = id139
+id140 = @TreeGetLeft
+[Treevmt + 20] = id140
+id141 = @TreeGetRight
+[Treevmt + 24] = id141
+id142 = @TreeRemove
+[Treevmt + 28] = id142
+id143 = @TreeSetLeft
+[Treevmt + 32] = id143
+id144 = @TreeInsert
+[Treevmt + 36] = id144
+id145 = @TreePrint
+[Treevmt + 40] = id145
+id146 = @TreeInit
+[Treevmt + 44] = id146
+id147 = @TreeGetHas_Right
+[Treevmt + 48] = id147
+id148 = @TreeGetHas_Left
+[Treevmt + 52] = id148
+id149 = @TreeRemoveRight
+[Treevmt + 56] = id149
+id150 = @TreeSearch
+[Treevmt + 60] = id150
+id151 = @TreeSetKey
+[Treevmt + 64] = id151
+id152 = @TreeCompare
+[Treevmt + 68] = id152
+id153 = @TreeSetHas_Right
+[Treevmt + 72] = id153
+id154 = @TreeRecPrint
+[Treevmt + 76] = id154
+[id133 + 0] = Treevmt
+id128 = id133
+if0 id128 goto null_err
+id155 = [id128 + 0]
+id155 = [id155 + 44]
+id156 = call id155(id128 id127)
+id129 = id156
+id132 = this
+id157 = 1
+id130 = id157
+loopid158:
+if0 id130 goto endid158
+if0 id132 goto null_err
+id159 = [id132 + 0]
+id159 = [id159 + 12]
+id160 = call id159(id132)
+id131 = id160
+id161 = id127 < id131
+if0 id161 goto elseid161
+if0 id132 goto null_err
+id162 = [id132 + 0]
+id162 = [id162 + 52]
+id163 = call id162(id132)
+if0 id163 goto elseid163
+if0 id132 goto null_err
+id164 = [id132 + 0]
+id164 = [id164 + 20]
+id165 = call id164(id132)
+id132 = id165
+goto endid163
+elseid163:
+id166 = 0
+id130 = id166
+if0 id132 goto null_err
+id167 = [id132 + 0]
+id167 = [id167 + 4]
+id169 = 1
+id168 = call id167(id132 id169)
+id129 = id168
+if0 id132 goto null_err
+id170 = [id132 + 0]
+id170 = [id170 + 32]
+id171 = call id170(id132 id128)
+id129 = id171
+endid163:
+goto endid161
+elseid161:
+if0 id132 goto null_err
+id172 = [id132 + 0]
+id172 = [id172 + 48]
+id173 = call id172(id132)
+if0 id173 goto elseid173
+if0 id132 goto null_err
+id174 = [id132 + 0]
+id174 = [id174 + 24]
+id175 = call id174(id132)
+id132 = id175
+goto endid173
+elseid173:
+id176 = 0
+id130 = id176
+if0 id132 goto null_err
+id177 = [id132 + 0]
+id177 = [id177 + 72]
+id179 = 1
+id178 = call id177(id132 id179)
+id129 = id178
+if0 id132 goto null_err
+id180 = [id132 + 0]
+id180 = [id180 + 16]
+id181 = call id180(id132 id128)
+id129 = id181
+endid173:
+endid161:
+goto loopid158
+endid158:
+id182 = 1
+goto TreeInsert_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeInsert_end:
+      return id182
+
+func TreeDelete(this id183)
+id184 = this
+id185 = this
+id191 = 1
+id186 = id191
+id192 = 0
+id187 = id192
+id193 = 1
+id188 = id193
+loopid194:
+if0 id186 goto endid194
+if0 id184 goto null_err
+id195 = [id184 + 0]
+id195 = [id195 + 12]
+id196 = call id195(id184)
+id189 = id196
+id197 = id183 < id189
+if0 id197 goto elseid197
+if0 id184 goto null_err
+id198 = [id184 + 0]
+id198 = [id198 + 52]
+id199 = call id198(id184)
+if0 id199 goto elseid199
+id185 = id184
+if0 id184 goto null_err
+id200 = [id184 + 0]
+id200 = [id200 + 20]
+id201 = call id200(id184)
+id184 = id201
+goto endid199
+elseid199:
+id202 = 0
+id186 = id202
+endid199:
+goto endid197
+elseid197:
+id203 = id189 < id183
+if0 id203 goto elseid203
+if0 id184 goto null_err
+id204 = [id184 + 0]
+id204 = [id204 + 48]
+id205 = call id204(id184)
+if0 id205 goto elseid205
+id185 = id184
+if0 id184 goto null_err
+id206 = [id184 + 0]
+id206 = [id206 + 24]
+id207 = call id206(id184)
+id184 = id207
+goto endid205
+elseid205:
+id208 = 0
+id186 = id208
+endid205:
+goto endid203
+elseid203:
+if0 id188 goto elseid188
+id209 = 0
+if0 id184 goto null_err
+id211 = [id184 + 0]
+id211 = [id211 + 48]
+id212 = call id211(id184)
+id213 = 1
+id210 = id213 - id212
+if0 id210 goto endid210
+if0 id184 goto null_err
+id215 = [id184 + 0]
+id215 = [id215 + 52]
+id216 = call id215(id184)
+id217 = 1
+id214 = id217 - id216
+id209 = id214
+endid210:
+if0 id209 goto elseid209
+id218 = 1
+id190 = id218
+goto endid209
+elseid209:
+if0 this goto null_err
+id219 = [this + 0]
+id219 = [id219 + 28]
+id220 = call id219(this id185 id184)
+id190 = id220
+endid209:
+goto endid188
+elseid188:
+if0 this goto null_err
+id221 = [this + 0]
+id221 = [id221 + 28]
+id222 = call id221(this id185 id184)
+id190 = id222
+endid188:
+id223 = 1
+id187 = id223
+id224 = 0
+id186 = id224
+endid203:
+endid197:
+id225 = 0
+id188 = id225
+goto loopid194
+endid194:
+goto TreeDelete_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeDelete_end:
+      return id187
+
+func TreeRemove(this id226 id227)
+if0 id227 goto null_err
+id231 = [id227 + 0]
+id231 = [id231 + 52]
+id232 = call id231(id227)
+if0 id232 goto elseid232
+if0 this goto null_err
+id233 = [this + 0]
+id233 = [id233 + 8]
+id234 = call id233(this id226 id227)
+id228 = id234
+goto endid232
+elseid232:
+if0 id227 goto null_err
+id235 = [id227 + 0]
+id235 = [id235 + 48]
+id236 = call id235(id227)
+if0 id236 goto elseid236
+if0 this goto null_err
+id237 = [this + 0]
+id237 = [id237 + 56]
+id238 = call id237(this id226 id227)
+id228 = id238
+goto endid236
+elseid236:
+if0 id227 goto null_err
+id239 = [id227 + 0]
+id239 = [id239 + 12]
+id240 = call id239(id227)
+id229 = id240
+if0 id226 goto null_err
+id241 = [id226 + 0]
+id241 = [id241 + 20]
+id242 = call id241(id226)
+if0 id242 goto null_err
+id243 = [id242 + 0]
+id243 = [id243 + 12]
+id244 = call id243(id242)
+id230 = id244
+if0 this goto null_err
+id245 = [this + 0]
+id245 = [id245 + 68]
+id246 = call id245(this id229 id230)
+if0 id246 goto elseid246
+if0 id226 goto null_err
+id247 = [id226 + 0]
+id247 = [id247 + 32]
+id249 = [this + 12]
+id248 = call id247(id226 id249)
+id228 = id248
+if0 id226 goto null_err
+id250 = [id226 + 0]
+id250 = [id250 + 4]
+id252 = 0
+id251 = call id250(id226 id252)
+id228 = id251
+goto endid246
+elseid246:
+if0 id226 goto null_err
+id253 = [id226 + 0]
+id253 = [id253 + 16]
+id255 = [this + 12]
+id254 = call id253(id226 id255)
+id228 = id254
+if0 id226 goto null_err
+id256 = [id226 + 0]
+id256 = [id256 + 72]
+id258 = 0
+id257 = call id256(id226 id258)
+id228 = id257
+endid246:
+endid236:
+endid232:
+id259 = 1
+goto TreeRemove_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeRemove_end:
+      return id259
+
+func TreeRemoveRight(this id260 id261)
+loopid263:
+if0 id261 goto null_err
+id264 = [id261 + 0]
+id264 = [id264 + 48]
+id265 = call id264(id261)
+if0 id265 goto endid263
+if0 id261 goto null_err
+id266 = [id261 + 0]
+id266 = [id266 + 64]
+if0 id261 goto null_err
+id268 = [id261 + 0]
+id268 = [id268 + 24]
+id269 = call id268(id261)
+if0 id269 goto null_err
+id270 = [id269 + 0]
+id270 = [id270 + 12]
+id271 = call id270(id269)
+id267 = call id266(id261 id271)
+id262 = id267
+id260 = id261
+if0 id261 goto null_err
+id272 = [id261 + 0]
+id272 = [id272 + 24]
+id273 = call id272(id261)
+id261 = id273
+goto loopid263
+endid263:
+if0 id260 goto null_err
+id274 = [id260 + 0]
+id274 = [id274 + 16]
+id276 = [this + 12]
+id275 = call id274(id260 id276)
+id262 = id275
+if0 id260 goto null_err
+id277 = [id260 + 0]
+id277 = [id277 + 72]
+id279 = 0
+id278 = call id277(id260 id279)
+id262 = id278
+id280 = 1
+goto TreeRemoveRight_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeRemoveRight_end:
+      return id280
+
+func TreeRemoveLeft(this id281 id282)
+loopid284:
+if0 id282 goto null_err
+id285 = [id282 + 0]
+id285 = [id285 + 52]
+id286 = call id285(id282)
+if0 id286 goto endid284
+if0 id282 goto null_err
+id287 = [id282 + 0]
+id287 = [id287 + 64]
+if0 id282 goto null_err
+id289 = [id282 + 0]
+id289 = [id289 + 20]
+id290 = call id289(id282)
+if0 id290 goto null_err
+id291 = [id290 + 0]
+id291 = [id291 + 12]
+id292 = call id291(id290)
+id288 = call id287(id282 id292)
+id283 = id288
+id281 = id282
+if0 id282 goto null_err
+id293 = [id282 + 0]
+id293 = [id293 + 20]
+id294 = call id293(id282)
+id282 = id294
+goto loopid284
+endid284:
+if0 id281 goto null_err
+id295 = [id281 + 0]
+id295 = [id295 + 32]
+id297 = [this + 12]
+id296 = call id295(id281 id297)
+id283 = id296
+if0 id281 goto null_err
+id298 = [id281 + 0]
+id298 = [id298 + 4]
+id300 = 0
+id299 = call id298(id281 id300)
+id283 = id299
+id301 = 1
+goto TreeRemoveLeft_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeRemoveLeft_end:
+      return id301
+
+func TreeSearch(this id302)
+id305 = this
+id307 = 1
+id303 = id307
+id308 = 0
+id304 = id308
+loopid309:
+if0 id303 goto endid309
+if0 id305 goto null_err
+id310 = [id305 + 0]
+id310 = [id310 + 12]
+id311 = call id310(id305)
+id306 = id311
+id312 = id302 < id306
+if0 id312 goto elseid312
+if0 id305 goto null_err
+id313 = [id305 + 0]
+id313 = [id313 + 52]
+id314 = call id313(id305)
+if0 id314 goto elseid314
+if0 id305 goto null_err
+id315 = [id305 + 0]
+id315 = [id315 + 20]
+id316 = call id315(id305)
+id305 = id316
+goto endid314
+elseid314:
+id317 = 0
+id303 = id317
+endid314:
+goto endid312
+elseid312:
+id318 = id306 < id302
+if0 id318 goto elseid318
+if0 id305 goto null_err
+id319 = [id305 + 0]
+id319 = [id319 + 48]
+id320 = call id319(id305)
+if0 id320 goto elseid320
+if0 id305 goto null_err
+id321 = [id305 + 0]
+id321 = [id321 + 24]
+id322 = call id321(id305)
+id305 = id322
+goto endid320
+elseid320:
+id323 = 0
+id303 = id323
+endid320:
+goto endid318
+elseid318:
+id324 = 1
+id304 = id324
+id325 = 0
+id303 = id325
+endid318:
+endid312:
+goto loopid309
+endid309:
+goto TreeSearch_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeSearch_end:
+      return id304
+
+func TreePrint(this)
+id326 = this
+if0 this goto null_err
+id328 = [this + 0]
+id328 = [id328 + 76]
+id329 = call id328(this id326)
+id327 = id329
+id330 = 1
+goto TreePrint_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreePrint_end:
+      return id330
+
+func TreeRecPrint(this id331)
+if0 id331 goto null_err
+id333 = [id331 + 0]
+id333 = [id333 + 52]
+id334 = call id333(id331)
+if0 id334 goto elseid334
+if0 this goto null_err
+id335 = [this + 0]
+id335 = [id335 + 76]
+if0 id331 goto null_err
+id337 = [id331 + 0]
+id337 = [id337 + 20]
+id338 = call id337(id331)
+id336 = call id335(this id338)
+id332 = id336
+goto endid334
+elseid334:
+id339 = 1
+id332 = id339
+endid334:
+if0 id331 goto null_err
+id340 = [id331 + 0]
+id340 = [id340 + 12]
+id341 = call id340(id331)
+print(id341)
+if0 id331 goto null_err
+id342 = [id331 + 0]
+id342 = [id342 + 48]
+id343 = call id342(id331)
+if0 id343 goto elseid343
+if0 this goto null_err
+id344 = [this + 0]
+id344 = [id344 + 76]
+if0 id331 goto null_err
+id346 = [id331 + 0]
+id346 = [id346 + 24]
+id347 = call id346(id331)
+id345 = call id344(this id347)
+id332 = id345
+goto endid343
+elseid343:
+id348 = 1
+id332 = id348
+endid343:
+id349 = 1
+goto TreeRecPrint_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+TreeRecPrint_end:
+      return id349
+
+

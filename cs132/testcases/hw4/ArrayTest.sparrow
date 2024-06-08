@@ -1,0 +1,97 @@
+func main()
+id3 = 0
+id1 = id3
+id5 = 6
+id6 = 0
+id7 = id5 < id6
+id6 = 1
+id7 = id6 - id7
+if0 id7 goto array_err
+id8 = id5 + id6
+id6 = 4
+id8 = id6 * id8
+id4 = alloc(id8)
+if0 id4 goto null_err
+[id4 + 0] = id5
+id0 = id4
+if0 id0 goto null_err
+id9 = [id0 + 0]
+id2 = id9
+loopid10:
+id11 = id1 < id2
+if0 id11 goto endid10
+if0 id0 goto null_err
+id12 = [id0 + 0]
+id13 = 1
+id14 = 0
+id14 = id14 - id13
+id15 = id14 < id1
+if0 id15 goto array_err
+id15 = id1 < id12
+if0 id15 goto array_err
+id16 = 4
+id17 = id1 + id13
+id17 = id17 * id16
+id18 = id0 + id17
+[id18 + 0] = id1
+id20 = 1
+id19 = id1 + id20
+id1 = id19
+goto loopid10
+endid10:
+id22 = 1
+id21 = id2 - id22
+id1 = id21
+id24 = 0
+id25 = 1
+id23 = id24 - id25
+id2 = id23
+loopid26:
+id27 = id2 < id1
+if0 id27 goto endid26
+if0 id0 goto null_err
+id29 = [id0 + 0]
+id30 = 1
+id31 = 0
+id31 = id31 - id30
+id32 = id31 < id1
+if0 id32 goto array_err
+id32 = id1 < id29
+if0 id32 goto array_err
+id33 = 4
+id34 = id1 + id30
+id34 = id34 * id33
+id35 = id0 + id34
+id28 = [id35 + 0]
+print(id28)
+id37 = 1
+id36 = id1 - id37
+id1 = id36
+goto loopid26
+endid26:
+id39 = 10
+if0 id0 goto null_err
+id40 = [id0 + 0]
+id41 = 1
+id42 = 0
+id42 = id42 - id41
+id43 = id42 < id39
+if0 id43 goto array_err
+id43 = id39 < id40
+if0 id43 goto array_err
+id44 = 4
+id45 = id39 + id41
+id45 = id45 * id44
+id46 = id0 + id45
+id38 = [id46 + 0]
+print(id38)
+goto main_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+main_end:
+id47 = 0
+      return id47
+
+

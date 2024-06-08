@@ -1,0 +1,12 @@
+func main()
+    id0 = 0
+    one = 1
+loopid26:
+    id0 = id0 + one
+    print(id0)
+    id1 = 5
+    id2 = id0 < id1
+    if0 id2 goto endid26
+    goto loopid26
+endid26:
+    return id1

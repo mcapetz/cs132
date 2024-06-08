@@ -19,7 +19,7 @@ class BBS{
 	int aux01 ;
 	aux01 = this.Init(sz);
 	aux01 = this.Print();
-	System.out.println(99999);
+	System.out.println(99999); // so i got to this
 	aux01 = this.Sort();
 	aux01 = this.Print();
 	return 0 ;
@@ -37,20 +37,34 @@ class BBS{
 	int aux07 ;
 	int j ;
 	int t ;
+	int my_var;
+
+	my_var = number.length;
+	// // System.out.println(2222);
+	// System.out.println(my_var);
+	// System.out.println(2222);
 	i = size - 1 ;
 	aux02 = 0 - 1 ;
+	// System.out.println(size); // seems like the size is 10
+	// System.out.println(i); // seems like i is 9
 	while (aux02 < i) {
 	    j = 1 ;
 	    //aux03 = i+1 ;
-	    while (j < (i+1)){
+	    while (j < (i+1)){ // j < 10
 		aux07 = j - 1 ;
 		aux04 = number[aux07] ;
-		aux05 = number[j] ;
+		// System.out.println(8888);
+		// System.out.println(j); // get to j = 7
+		aux05 = number[j] ; // now there is a problem
+		// System.out.println(7777);
 		if (aux05 < aux04) {
 		    aux06 = j - 1 ;
 		    t = number[aux06] ;
+			// System.out.println(6666);
 		    number[aux06] = number[j] ;
+			// System.out.println(5555);
 		    number[j] = t;
+			// System.out.println(4444);
 		}
 		else nt = 0 ;
 		j = j + 1 ;

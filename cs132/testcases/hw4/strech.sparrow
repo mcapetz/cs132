@@ -15,23 +15,24 @@ func f()
      f = a + b
      goto L10
 L8:  e = b + c
-     goto L14
+     //print(e) 
+     goto L14 // good
 L10: fifty = 50
      b = d + fifty
      s = c+d
      t = s+f
-     print(t)
-     e = c + f
+     print(t) // good up until here
+     e = c + f // this is good e = 60
      forty = 40
-     b = b + forty
+     b = b + forty // this is good
      goto L8
 L14: ten = 10
-     f = a + ten
+     f = a + ten // a is 10, f is 20
 L22: b = 55
      twenty = 20
-     c = a - twenty
+     c = a - twenty // good
      z = b < c
-     if0 z goto L20
+     if0 z goto L20 // false so go to L20
      d = c + b
      e = d - ten
      w = d+e
@@ -41,18 +42,18 @@ L22: b = 55
      f = two - b
      goto L22
 L20: seven = 7
-     b = f + seven
-     c = c + b
+     b = f + seven // good
+     c = c + b // b is 27 - 10 = 17 good
      two = 2
-     e = two * c
-     g = f + ten
+     e = two * c // good
+     g = f + ten // 20 + 10 = 30
      fiftyfive = 55
-     h = fiftyfive
+     h = fiftyfive // h is 55
      v2 = @func_g
-     x = g < h
+     x = g < h // 30 < 55? yes so we go to 
      if0 x goto L27
      i = g - twenty
-     h = call v2(b c d e f g h i)
+     h = call v2(b c d e f g h i) // here
      j = i + h
      goto L29
 L27: one = 1

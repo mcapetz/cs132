@@ -1,0 +1,440 @@
+func main()
+id1 = 12
+id0 = alloc(id1)
+if0 id0 goto null_err
+id1 = 16
+BBSvmt = alloc(id1)
+if0 BBSvmt goto null_err
+id2 = @BBSPrint
+[BBSvmt + 0] = id2
+id3 = @BBSInit
+[BBSvmt + 4] = id3
+id4 = @BBSStart
+[BBSvmt + 8] = id4
+id5 = @BBSSort
+[BBSvmt + 12] = id5
+[id0 + 0] = BBSvmt
+if0 id0 goto null_err
+id6 = [id0 + 0]
+id6 = [id6 + 8]
+id8 = 10
+id7 = call id6(id0 id8)
+print(id7)
+goto main_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+main_end:
+id9 = 0
+      return id9
+
+func BBSStart(this id10)
+if0 this goto null_err
+id12 = [this + 0]
+id12 = [id12 + 4]
+id13 = call id12(this id10)
+id11 = id13
+if0 this goto null_err
+id14 = [this + 0]
+id14 = [id14 + 0]
+id15 = call id14(this)
+id11 = id15
+id16 = 99999
+print(id16)
+if0 this goto null_err
+id17 = [this + 0]
+id17 = [id17 + 12]
+id18 = call id17(this)
+id11 = id18
+if0 this goto null_err
+id19 = [this + 0]
+id19 = [id19 + 0]
+id20 = call id19(this)
+id11 = id20
+id21 = 0
+goto BBSStart_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+BBSStart_end:
+      return id21
+
+func BBSSort(this)
+id32 = [this + 8]
+id33 = 1
+id31 = id32 - id33
+id23 = id31
+id35 = 0
+id36 = 1
+id34 = id35 - id36
+id24 = id34
+loopid37:
+id38 = id24 < id23
+if0 id38 goto endid37
+id39 = 1
+id29 = id39
+loopid40:
+id43 = 1
+id42 = id23 + id43
+id41 = id29 < id42
+if0 id41 goto endid40
+id45 = 1
+id44 = id29 - id45
+id28 = id44
+id47 = [this + 4] // here
+if0 id47 goto null_err
+id48 = [id47 + 0]
+id49 = 1
+id50 = 0
+id50 = id50 - id49
+id51 = id50 < id28
+if0 id51 goto array_err
+id51 = id28 < id48
+if0 id51 goto array_err
+id52 = 4
+id53 = id28 + id49
+id53 = id53 * id52
+id54 = id47 + id53
+id46 = [id54 + 0]
+id25 = id46
+id56 = [this + 4]
+if0 id56 goto null_err
+id57 = [id56 + 0]
+id58 = 1
+id59 = 0
+id59 = id59 - id58
+id60 = id59 < id29
+if0 id60 goto array_err
+id60 = id29 < id57
+if0 id60 goto array_err
+id61 = 4
+id62 = id29 + id58
+id62 = id62 * id61
+id63 = id56 + id62
+id55 = [id63 + 0]
+id26 = id55
+id64 = id26 < id25
+if0 id64 goto elseid64
+id66 = 1
+id65 = id29 - id66
+id27 = id65
+id68 = [this + 4]
+if0 id68 goto null_err
+id69 = [id68 + 0]
+id70 = 1
+id71 = 0
+id71 = id71 - id70
+id72 = id71 < id27
+if0 id72 goto array_err
+id72 = id27 < id69
+if0 id72 goto array_err
+id73 = 4
+id74 = id27 + id70
+id74 = id74 * id73
+id75 = id68 + id74
+id67 = [id75 + 0]
+id30 = id67
+id76 = [this + 4]
+id78 = [this + 4]
+if0 id78 goto null_err
+id79 = [id78 + 0]
+id80 = 1
+id81 = 0
+id81 = id81 - id80
+id82 = id81 < id29
+if0 id82 goto array_err
+id82 = id29 < id79
+if0 id82 goto array_err
+id83 = 4
+id84 = id29 + id80
+id84 = id84 * id83
+id85 = id78 + id84
+id77 = [id85 + 0]
+if0 id76 goto null_err
+id86 = [id76 + 0]
+id87 = 1
+id88 = 0
+id88 = id88 - id87
+id89 = id88 < id27
+if0 id89 goto array_err
+id89 = id27 < id86
+if0 id89 goto array_err
+id90 = 4
+id91 = id27 + id87
+id91 = id91 * id90
+id92 = id76 + id91
+[id92 + 0] = id77
+id93 = [this + 4]
+if0 id93 goto null_err
+id94 = [id93 + 0]
+id95 = 1
+id96 = 0
+id96 = id96 - id95
+id97 = id96 < id29
+if0 id97 goto array_err
+id97 = id29 < id94
+if0 id97 goto array_err
+id98 = 4
+id99 = id29 + id95
+id99 = id99 * id98
+id100 = id93 + id99
+[id100 + 0] = id30
+goto endid64
+elseid64:
+id101 = 0
+id22 = id101
+endid64:
+id103 = 1
+id102 = id29 + id103
+id29 = id102
+goto loopid40
+endid40:
+id105 = 1
+id104 = id23 - id105
+id23 = id104
+goto loopid37
+endid37:
+id106 = 0
+goto BBSSort_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+BBSSort_end:
+      return id106
+
+func BBSPrint(this)
+id108 = 0
+id107 = id108
+loopid109:
+id111 = [this + 8]
+id110 = id107 < id111
+if0 id110 goto endid109
+id113 = [this + 4]
+if0 id113 goto null_err
+id114 = [id113 + 0]
+id115 = 1
+id116 = 0
+id116 = id116 - id115
+id117 = id116 < id107
+if0 id117 goto array_err
+id117 = id107 < id114
+if0 id117 goto array_err
+id118 = 4
+id119 = id107 + id115
+id119 = id119 * id118
+id120 = id113 + id119
+id112 = [id120 + 0]
+print(id112)
+id122 = 1
+id121 = id107 + id122
+id107 = id121
+goto loopid109
+endid109:
+id123 = 0
+goto BBSPrint_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+BBSPrint_end:
+      return id123
+
+func BBSInit(this id124)
+id125 = [this + 8]
+[this + 8] = id124
+id126 = [this + 4]
+id128 = 0
+id129 = id124 < id128
+id128 = 1
+id129 = id128 - id129
+if0 id129 goto array_err
+id130 = id124 + id128
+id128 = 4
+id130 = id128 * id130
+id127 = alloc(id130)
+if0 id127 goto null_err
+[id127 + 0] = id124
+[this + 4] = id127
+id131 = [this + 4]
+id132 = 0
+id133 = 20
+if0 id131 goto null_err
+id134 = [id131 + 0]
+id135 = 1
+id136 = 0
+id136 = id136 - id135
+id137 = id136 < id132
+if0 id137 goto array_err
+id137 = id132 < id134
+if0 id137 goto array_err
+id138 = 4
+id139 = id132 + id135
+id139 = id139 * id138
+id140 = id131 + id139
+[id140 + 0] = id133
+id141 = [this + 4]
+id142 = 1
+id143 = 7
+if0 id141 goto null_err
+id144 = [id141 + 0]
+id145 = 1
+id146 = 0
+id146 = id146 - id145
+id147 = id146 < id142
+if0 id147 goto array_err
+id147 = id142 < id144
+if0 id147 goto array_err
+id148 = 4
+id149 = id142 + id145
+id149 = id149 * id148
+id150 = id141 + id149
+[id150 + 0] = id143
+id151 = [this + 4]
+id152 = 2
+id153 = 12
+if0 id151 goto null_err
+id154 = [id151 + 0]
+id155 = 1
+id156 = 0
+id156 = id156 - id155
+id157 = id156 < id152
+if0 id157 goto array_err
+id157 = id152 < id154
+if0 id157 goto array_err
+id158 = 4
+id159 = id152 + id155
+id159 = id159 * id158
+id160 = id151 + id159
+[id160 + 0] = id153
+id161 = [this + 4]
+id162 = 3
+id163 = 18
+if0 id161 goto null_err
+id164 = [id161 + 0]
+id165 = 1
+id166 = 0
+id166 = id166 - id165
+id167 = id166 < id162
+if0 id167 goto array_err
+id167 = id162 < id164
+if0 id167 goto array_err
+id168 = 4
+id169 = id162 + id165
+id169 = id169 * id168
+id170 = id161 + id169
+[id170 + 0] = id163
+id171 = [this + 4]
+id172 = 4
+id173 = 2
+if0 id171 goto null_err
+id174 = [id171 + 0]
+id175 = 1
+id176 = 0
+id176 = id176 - id175
+id177 = id176 < id172
+if0 id177 goto array_err
+id177 = id172 < id174
+if0 id177 goto array_err
+id178 = 4
+id179 = id172 + id175
+id179 = id179 * id178
+id180 = id171 + id179
+[id180 + 0] = id173
+id181 = [this + 4]
+id182 = 5
+id183 = 11
+if0 id181 goto null_err
+id184 = [id181 + 0]
+id185 = 1
+id186 = 0
+id186 = id186 - id185
+id187 = id186 < id182
+if0 id187 goto array_err
+id187 = id182 < id184
+if0 id187 goto array_err
+id188 = 4
+id189 = id182 + id185
+id189 = id189 * id188
+id190 = id181 + id189
+[id190 + 0] = id183
+id191 = [this + 4]
+id192 = 6
+id193 = 6
+if0 id191 goto null_err
+id194 = [id191 + 0]
+id195 = 1
+id196 = 0
+id196 = id196 - id195
+id197 = id196 < id192
+if0 id197 goto array_err
+id197 = id192 < id194
+if0 id197 goto array_err
+id198 = 4
+id199 = id192 + id195
+id199 = id199 * id198
+id200 = id191 + id199
+[id200 + 0] = id193
+id201 = [this + 4]
+id202 = 7
+id203 = 9
+if0 id201 goto null_err
+id204 = [id201 + 0]
+id205 = 1
+id206 = 0
+id206 = id206 - id205
+id207 = id206 < id202
+if0 id207 goto array_err
+id207 = id202 < id204
+if0 id207 goto array_err
+id208 = 4
+id209 = id202 + id205
+id209 = id209 * id208
+id210 = id201 + id209
+[id210 + 0] = id203
+id211 = [this + 4]
+id212 = 8
+id213 = 19
+if0 id211 goto null_err
+id214 = [id211 + 0]
+id215 = 1
+id216 = 0
+id216 = id216 - id215
+id217 = id216 < id212
+if0 id217 goto array_err
+id217 = id212 < id214
+if0 id217 goto array_err
+id218 = 4
+id219 = id212 + id215
+id219 = id219 * id218
+id220 = id211 + id219
+[id220 + 0] = id213
+id221 = [this + 4]
+id222 = 9
+id223 = 5
+if0 id221 goto null_err
+id224 = [id221 + 0]
+id225 = 1
+id226 = 0
+id226 = id226 - id225
+id227 = id226 < id222
+if0 id227 goto array_err
+id227 = id222 < id224
+if0 id227 goto array_err
+id228 = 4
+id229 = id222 + id225
+id229 = id229 * id228
+id230 = id221 + id229
+[id230 + 0] = id223
+id231 = 0
+goto BBSInit_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+BBSInit_end:
+      return id231
+
+

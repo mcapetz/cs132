@@ -1,0 +1,763 @@
+func main()
+id1 = 4
+id0 = alloc(id1)
+if0 id0 goto null_err
+id1 = 4
+LLvmt = alloc(id1)
+if0 LLvmt goto null_err
+id2 = @LLStart
+[LLvmt + 0] = id2
+[id0 + 0] = LLvmt
+if0 id0 goto null_err
+id3 = [id0 + 0]
+id3 = [id3 + 0]
+id4 = call id3(id0)
+print(id4)
+goto main_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+main_end:
+id5 = 0
+      return id5
+
+func ElementInit(this id6 id7 id8)
+id9 = [this + 12]
+[this + 12] = id6
+id10 = [this + 4]
+[this + 4] = id7
+id11 = [this + 8]
+[this + 8] = id8
+id12 = 1
+goto ElementInit_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ElementInit_end:
+      return id12
+
+func ElementGetAge(this)
+id13 = [this + 12]
+goto ElementGetAge_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ElementGetAge_end:
+      return id13
+
+func ElementGetSalary(this)
+id14 = [this + 4]
+goto ElementGetSalary_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ElementGetSalary_end:
+      return id14
+
+func ElementGetMarried(this)
+id15 = [this + 8]
+goto ElementGetMarried_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ElementGetMarried_end:
+      return id15
+
+func ElementEqual(this id16)
+id21 = 1
+id17 = id21
+if0 id16 goto null_err
+id22 = [id16 + 0]
+id22 = [id22 + 8]
+id23 = call id22(id16)
+id18 = id23
+if0 this goto null_err
+id25 = [this + 0]
+id25 = [id25 + 20]
+id27 = [this + 12]
+id26 = call id25(this id18 id27)
+id28 = 1
+id24 = id28 - id26
+if0 id24 goto elseid24
+id29 = 0
+id17 = id29
+goto endid24
+elseid24:
+if0 id16 goto null_err
+id30 = [id16 + 0]
+id30 = [id30 + 0]
+id31 = call id30(id16)
+id19 = id31
+if0 this goto null_err
+id33 = [this + 0]
+id33 = [id33 + 20]
+id35 = [this + 4]
+id34 = call id33(this id19 id35)
+id36 = 1
+id32 = id36 - id34
+if0 id32 goto elseid32
+id37 = 0
+id17 = id37
+goto endid32
+elseid32:
+id38 = [this + 8]
+if0 id38 goto elseid38
+if0 id16 goto null_err
+id40 = [id16 + 0]
+id40 = [id40 + 16]
+id41 = call id40(id16)
+id42 = 1
+id39 = id42 - id41
+if0 id39 goto elseid39
+id43 = 0
+id17 = id43
+goto endid39
+elseid39:
+id44 = 0
+id20 = id44
+endid39:
+goto endid38
+elseid38:
+if0 id16 goto null_err
+id45 = [id16 + 0]
+id45 = [id45 + 16]
+id46 = call id45(id16)
+if0 id46 goto elseid46
+id47 = 0
+id17 = id47
+goto endid46
+elseid46:
+id48 = 0
+id20 = id48
+endid46:
+endid38:
+endid32:
+endid24:
+goto ElementEqual_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ElementEqual_end:
+      return id17
+
+func ElementCompare(this id49 id50)
+id53 = 0
+id51 = id53
+id55 = 1
+id54 = id50 + id55
+id52 = id54
+id56 = id49 < id50
+if0 id56 goto elseid56
+id57 = 0
+id51 = id57
+goto endid56
+elseid56:
+id59 = id49 < id52
+id60 = 1
+id58 = id60 - id59
+if0 id58 goto elseid58
+id61 = 0
+id51 = id61
+goto endid58
+elseid58:
+id62 = 1
+id51 = id62
+endid58:
+endid56:
+goto ElementCompare_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ElementCompare_end:
+      return id51
+
+func ListInit(this)
+id63 = [this + 12]
+id64 = 1
+[this + 12] = id64
+id65 = 1
+goto ListInit_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListInit_end:
+      return id65
+
+func ListInitNew(this id66 id67 id68)
+id69 = [this + 12]
+[this + 12] = id68
+id70 = [this + 4]
+[this + 4] = id66
+id71 = [this + 8]
+[this + 8] = id67
+id72 = 1
+goto ListInitNew_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListInitNew_end:
+      return id72
+
+func ListInsert(this id73)
+id75 = this
+id78 = 16
+id77 = alloc(id78)
+if0 id77 goto null_err
+id78 = 40
+Listvmt = alloc(id78)
+if0 Listvmt goto null_err
+id79 = @ListDelete
+[Listvmt + 0] = id79
+id80 = @ListPrint
+[Listvmt + 4] = id80
+id81 = @ListInit
+[Listvmt + 8] = id81
+id82 = @ListGetElem
+[Listvmt + 12] = id82
+id83 = @ListGetNext
+[Listvmt + 16] = id83
+id84 = @ListSetNext
+[Listvmt + 20] = id84
+id85 = @ListSearch
+[Listvmt + 24] = id85
+id86 = @ListGetEnd
+[Listvmt + 28] = id86
+id87 = @ListInitNew
+[Listvmt + 32] = id87
+id88 = @ListInsert
+[Listvmt + 36] = id88
+[id77 + 0] = Listvmt
+id76 = id77
+if0 id76 goto null_err
+id89 = [id76 + 0]
+id89 = [id89 + 32]
+id91 = 0
+id90 = call id89(id76 id73 id75 id91)
+id74 = id90
+goto ListInsert_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListInsert_end:
+      return id76
+
+func ListSetNext(this id92)
+id93 = [this + 8]
+[this + 8] = id92
+id94 = 1
+goto ListSetNext_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListSetNext_end:
+      return id94
+
+func ListDelete(this id95)
+id96 = this
+id105 = 0
+id97 = id105
+id107 = 0
+id108 = 1
+id106 = id107 - id108
+id103 = id106
+id99 = this
+id100 = this
+id109 = [this + 12]
+id101 = id109
+id110 = [this + 4]
+id102 = id110
+loopid111:
+id112 = 0
+id114 = 1
+id113 = id114 - id101
+if0 id113 goto endid113
+id116 = 1
+id115 = id116 - id97
+id112 = id115
+endid113:
+if0 id112 goto endid111
+if0 id95 goto null_err
+id117 = [id95 + 0]
+id117 = [id117 + 12]
+id118 = call id117(id95 id102)
+if0 id118 goto elseid118
+id119 = 1
+id97 = id119
+id121 = 0
+id120 = id103 < id121
+if0 id120 goto elseid120
+if0 id99 goto null_err
+id122 = [id99 + 0]
+id122 = [id122 + 16]
+id123 = call id122(id99)
+id96 = id123
+goto endid120
+elseid120:
+id125 = 0
+id126 = 555
+id124 = id125 - id126
+print(id124)
+if0 id100 goto null_err
+id127 = [id100 + 0]
+id127 = [id127 + 20]
+if0 id99 goto null_err
+id129 = [id99 + 0]
+id129 = [id129 + 16]
+id130 = call id129(id99)
+id128 = call id127(id100 id130)
+id98 = id128
+id132 = 0
+id133 = 555
+id131 = id132 - id133
+print(id131)
+endid120:
+goto endid118
+elseid118:
+id134 = 0
+id104 = id134
+endid118:
+id136 = 1
+id135 = id136 - id97
+if0 id135 goto elseid135
+id100 = id99
+if0 id99 goto null_err
+id137 = [id99 + 0]
+id137 = [id137 + 16]
+id138 = call id137(id99)
+id99 = id138
+if0 id99 goto null_err
+id139 = [id99 + 0]
+id139 = [id139 + 28]
+id140 = call id139(id99)
+id101 = id140
+if0 id99 goto null_err
+id141 = [id99 + 0]
+id141 = [id141 + 12]
+id142 = call id141(id99)
+id102 = id142
+id143 = 1
+id103 = id143
+goto endid135
+elseid135:
+id144 = 0
+id104 = id144
+endid135:
+goto loopid111
+endid111:
+goto ListDelete_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListDelete_end:
+      return id96
+
+func ListSearch(this id145)
+id151 = 0
+id146 = id151
+id147 = this
+id152 = [this + 12]
+id149 = id152
+id153 = [this + 4]
+id148 = id153
+loopid154:
+id156 = 1
+id155 = id156 - id149
+if0 id155 goto endid154
+if0 id145 goto null_err
+id157 = [id145 + 0]
+id157 = [id157 + 12]
+id158 = call id157(id145 id148)
+if0 id158 goto elseid158
+id159 = 1
+id146 = id159
+goto endid158
+elseid158:
+id160 = 0
+id150 = id160
+endid158:
+if0 id147 goto null_err
+id161 = [id147 + 0]
+id161 = [id161 + 16]
+id162 = call id161(id147)
+id147 = id162
+if0 id147 goto null_err
+id163 = [id147 + 0]
+id163 = [id163 + 28]
+id164 = call id163(id147)
+id149 = id164
+if0 id147 goto null_err
+id165 = [id147 + 0]
+id165 = [id165 + 12]
+id166 = call id165(id147)
+id148 = id166
+goto loopid154
+endid154:
+goto ListSearch_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListSearch_end:
+      return id146
+
+func ListGetEnd(this)
+id167 = [this + 12]
+goto ListGetEnd_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListGetEnd_end:
+      return id167
+
+func ListGetElem(this)
+id168 = [this + 4]
+goto ListGetElem_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListGetElem_end:
+      return id168
+
+func ListGetNext(this)
+id169 = [this + 8]
+goto ListGetNext_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListGetNext_end:
+      return id169
+
+func ListPrint(this)
+id170 = this
+id173 = [this + 12]
+id171 = id173
+id174 = [this + 4]
+id172 = id174
+loopid175:
+id177 = 1
+id176 = id177 - id171
+if0 id176 goto endid175
+if0 id172 goto null_err
+id178 = [id172 + 0]
+id178 = [id178 + 8]
+id179 = call id178(id172)
+print(id179)
+if0 id170 goto null_err
+id180 = [id170 + 0]
+id180 = [id180 + 16]
+id181 = call id180(id170)
+id170 = id181
+if0 id170 goto null_err
+id182 = [id170 + 0]
+id182 = [id182 + 28]
+id183 = call id182(id170)
+id171 = id183
+if0 id170 goto null_err
+id184 = [id170 + 0]
+id184 = [id184 + 12]
+id185 = call id184(id170)
+id172 = id185
+goto loopid175
+endid175:
+id186 = 1
+goto ListPrint_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+ListPrint_end:
+      return id186
+
+func LLStart(this)
+id194 = 16
+id193 = alloc(id194)
+if0 id193 goto null_err
+id194 = 40
+Listvmt = alloc(id194)
+if0 Listvmt goto null_err
+id195 = @ListDelete
+[Listvmt + 0] = id195
+id196 = @ListPrint
+[Listvmt + 4] = id196
+id197 = @ListInit
+[Listvmt + 8] = id197
+id198 = @ListGetElem
+[Listvmt + 12] = id198
+id199 = @ListGetNext
+[Listvmt + 16] = id199
+id200 = @ListSetNext
+[Listvmt + 20] = id200
+id201 = @ListSearch
+[Listvmt + 24] = id201
+id202 = @ListGetEnd
+[Listvmt + 28] = id202
+id203 = @ListInitNew
+[Listvmt + 32] = id203
+id204 = @ListInsert
+[Listvmt + 36] = id204
+[id193 + 0] = Listvmt
+id188 = id193
+if0 id188 goto null_err
+id205 = [id188 + 0]
+id205 = [id205 + 8]
+id206 = call id205(id188)
+id189 = id206
+id187 = id188
+if0 id187 goto null_err
+id207 = [id187 + 0]
+id207 = [id207 + 8]
+id208 = call id207(id187)
+id189 = id208
+if0 id187 goto null_err
+id209 = [id187 + 0]
+id209 = [id209 + 4]
+id210 = call id209(id187)
+id189 = id210
+id212 = 16
+id211 = alloc(id212)
+if0 id211 goto null_err
+id212 = 24
+Elementvmt = alloc(id212)
+if0 Elementvmt goto null_err
+id213 = @ElementGetSalary
+[Elementvmt + 0] = id213
+id214 = @ElementInit
+[Elementvmt + 4] = id214
+id215 = @ElementGetAge
+[Elementvmt + 8] = id215
+id216 = @ElementEqual
+[Elementvmt + 12] = id216
+id217 = @ElementGetMarried
+[Elementvmt + 16] = id217
+id218 = @ElementCompare
+[Elementvmt + 20] = id218
+[id211 + 0] = Elementvmt
+id190 = id211
+if0 id190 goto null_err
+id219 = [id190 + 0]
+id219 = [id219 + 4]
+id221 = 25
+id222 = 37000
+id223 = 0
+id220 = call id219(id190 id221 id222 id223)
+id189 = id220
+if0 id187 goto null_err
+id224 = [id187 + 0]
+id224 = [id224 + 36]
+id225 = call id224(id187 id190)
+id187 = id225
+if0 id187 goto null_err
+id226 = [id187 + 0]
+id226 = [id226 + 4]
+id227 = call id226(id187)
+id189 = id227
+id228 = 10000000
+print(id228)
+id230 = 16
+id229 = alloc(id230)
+if0 id229 goto null_err
+id230 = 24
+Elementvmt = alloc(id230)
+if0 Elementvmt goto null_err
+id231 = @ElementGetSalary
+[Elementvmt + 0] = id231
+id232 = @ElementInit
+[Elementvmt + 4] = id232
+id233 = @ElementGetAge
+[Elementvmt + 8] = id233
+id234 = @ElementEqual
+[Elementvmt + 12] = id234
+id235 = @ElementGetMarried
+[Elementvmt + 16] = id235
+id236 = @ElementCompare
+[Elementvmt + 20] = id236
+[id229 + 0] = Elementvmt
+id190 = id229
+if0 id190 goto null_err
+id237 = [id190 + 0]
+id237 = [id237 + 4]
+id239 = 39
+id240 = 42000
+id241 = 1
+id238 = call id237(id190 id239 id240 id241)
+id189 = id238
+id191 = id190
+if0 id187 goto null_err
+id242 = [id187 + 0]
+id242 = [id242 + 36]
+id243 = call id242(id187 id190)
+id187 = id243
+if0 id187 goto null_err
+id244 = [id187 + 0]
+id244 = [id244 + 4]
+id245 = call id244(id187)
+id189 = id245
+id246 = 10000000
+print(id246)
+id248 = 16
+id247 = alloc(id248)
+if0 id247 goto null_err
+id248 = 24
+Elementvmt = alloc(id248)
+if0 Elementvmt goto null_err
+id249 = @ElementGetSalary
+[Elementvmt + 0] = id249
+id250 = @ElementInit
+[Elementvmt + 4] = id250
+id251 = @ElementGetAge
+[Elementvmt + 8] = id251
+id252 = @ElementEqual
+[Elementvmt + 12] = id252
+id253 = @ElementGetMarried
+[Elementvmt + 16] = id253
+id254 = @ElementCompare
+[Elementvmt + 20] = id254
+[id247 + 0] = Elementvmt
+id190 = id247
+if0 id190 goto null_err
+id255 = [id190 + 0]
+id255 = [id255 + 4]
+id257 = 22
+id258 = 34000
+id259 = 0
+id256 = call id255(id190 id257 id258 id259)
+id189 = id256
+if0 id187 goto null_err
+id260 = [id187 + 0]
+id260 = [id260 + 36]
+id261 = call id260(id187 id190)
+id187 = id261
+if0 id187 goto null_err
+id262 = [id187 + 0]
+id262 = [id262 + 4]
+id263 = call id262(id187)
+id189 = id263
+id265 = 16
+id264 = alloc(id265)
+if0 id264 goto null_err
+id265 = 24
+Elementvmt = alloc(id265)
+if0 Elementvmt goto null_err
+id266 = @ElementGetSalary
+[Elementvmt + 0] = id266
+id267 = @ElementInit
+[Elementvmt + 4] = id267
+id268 = @ElementGetAge
+[Elementvmt + 8] = id268
+id269 = @ElementEqual
+[Elementvmt + 12] = id269
+id270 = @ElementGetMarried
+[Elementvmt + 16] = id270
+id271 = @ElementCompare
+[Elementvmt + 20] = id271
+[id264 + 0] = Elementvmt
+id192 = id264
+if0 id192 goto null_err
+id272 = [id192 + 0]
+id272 = [id272 + 4]
+id274 = 27
+id275 = 34000
+id276 = 0
+id273 = call id272(id192 id274 id275 id276)
+id189 = id273
+if0 id187 goto null_err
+id277 = [id187 + 0]
+id277 = [id277 + 24]
+id278 = call id277(id187 id191)
+print(id278)
+if0 id187 goto null_err
+id279 = [id187 + 0]
+id279 = [id279 + 24]
+id280 = call id279(id187 id192)
+print(id280)
+id281 = 10000000
+print(id281)
+id283 = 16
+id282 = alloc(id283)
+if0 id282 goto null_err
+id283 = 24
+Elementvmt = alloc(id283)
+if0 Elementvmt goto null_err
+id284 = @ElementGetSalary
+[Elementvmt + 0] = id284
+id285 = @ElementInit
+[Elementvmt + 4] = id285
+id286 = @ElementGetAge
+[Elementvmt + 8] = id286
+id287 = @ElementEqual
+[Elementvmt + 12] = id287
+id288 = @ElementGetMarried
+[Elementvmt + 16] = id288
+id289 = @ElementCompare
+[Elementvmt + 20] = id289
+[id282 + 0] = Elementvmt
+id190 = id282
+if0 id190 goto null_err
+id290 = [id190 + 0]
+id290 = [id290 + 4]
+id292 = 28
+id293 = 35000
+id294 = 0
+id291 = call id290(id190 id292 id293 id294)
+id189 = id291
+if0 id187 goto null_err
+id295 = [id187 + 0]
+id295 = [id295 + 36]
+id296 = call id295(id187 id190)
+id187 = id296
+if0 id187 goto null_err
+id297 = [id187 + 0]
+id297 = [id297 + 4]
+id298 = call id297(id187)
+id189 = id298
+id299 = 2220000
+print(id299)
+if0 id187 goto null_err
+id300 = [id187 + 0]
+id300 = [id300 + 0]
+id301 = call id300(id187 id191)
+id187 = id301
+if0 id187 goto null_err
+id302 = [id187 + 0]
+id302 = [id302 + 4]
+id303 = call id302(id187)
+id189 = id303
+id304 = 33300000
+print(id304)
+if0 id187 goto null_err
+id305 = [id187 + 0]
+id305 = [id305 + 0]
+id306 = call id305(id187 id190)
+id187 = id306
+if0 id187 goto null_err
+id307 = [id187 + 0]
+id307 = [id307 + 4]
+id308 = call id307(id187)
+id189 = id308
+id309 = 44440000
+print(id309)
+id310 = 0
+goto LLStart_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+LLStart_end:
+      return id310
+
+

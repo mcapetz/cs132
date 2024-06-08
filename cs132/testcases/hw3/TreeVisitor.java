@@ -316,11 +316,12 @@ class Tree{
 	return true ;
     }
     
-    public int accept(Visitor v){
+    public int accept(Visitor v){ // here
 	int nti ;
 
 	System.out.println(333);
 	nti = v.visit(this) ;
+	// System.out.println(222); // added this
 	return 0 ;
     }
 
@@ -334,6 +335,7 @@ class Visitor {
 
     public int visit(Tree n){
 	int nti ;
+	// System.out.println(111); // added this
 
 	if (n.GetHas_Right()){
 	    r = n.GetRight() ;

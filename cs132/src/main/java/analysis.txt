@@ -1,0 +1,14 @@
+M  -> C
+t0 -> t1
+s1 -> t0
+t1 -> t2 // hm line 6
+s2 -> t2 // hm line 10
+s3 -> t3
+// FacComputeFac
+a3 -> t1
+a2 -> t0
+t0 -> t2 // this is originally from line 35 lhs
+a4 -> t3
+s2 -> t4
+s3 -> t5
+s4 -> t2 // here is a repeat line 38 rhs

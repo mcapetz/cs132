@@ -1,0 +1,308 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+func Main()
+v116 = 12
+w0 = alloc(v116)
+v117 = 16
+vmt_LS = alloc(v117)
+v118 = @LSStart
+[vmt_LS + 0] = v118
+v119 = @LSPrint
+[vmt_LS + 4] = v119
+v120 = @LSSearch
+[vmt_LS + 8] = v120
+v121 = @LSInit
+[vmt_LS + 12] = v121
+[w0 + 0] = vmt_LS
+v122 = 0
+[w0 + 4] = v122
+v123 = 0
+[w0 + 8] = v123
+if0 w0 goto null8
+goto program32
+null8:
+error("null pointer")
+program32:
+w1 = [w0 + 0] 
+w1 = [w1 + 0]
+v124 = 10
+v126 = 12
+w2 = call w1(w0 v124)
+print(w2)
+goto main_end
+main_end:
+v127 = 0 
+return v127
+func LSStart(this sz) 
+if0 this goto null1
+goto program0
+null1:
+error("null pointer")
+program0:
+v0 = [this + 0]
+v0 = [v0 + 12]
+v1 = call v0(this sz)
+aux01 = v1
+goto program1
+program1:
+if0 this goto null2
+goto program2
+null2:
+error("null pointer")
+program2:
+v2 = [this + 0]
+v2 = [v2 + 4]
+v3 = call v2(this)
+aux02 = v3
+goto program3
+program3:
+v4 = 9999
+print(v4)
+if0 this goto null3
+goto program4
+null3:
+error("null pointer")
+program4:
+v5 = [this + 0]
+v5 = [v5 + 8]
+v6 = 8
+v7 = call v5(this v6)
+print(v7)
+if0 this goto null4
+goto program5
+null4:
+error("null pointer")
+program5:
+v8 = [this + 0]
+v8 = [v8 + 8]
+v9 = 12
+v10 = call v8(this v9)
+print(v10)
+if0 this goto null5
+goto program6
+null5:
+error("null pointer")
+program6:
+v11 = [this + 0]
+v11 = [v11 + 8]
+v12 = 17
+v13 = call v11(this v12)
+print(v13)
+if0 this goto null6
+goto program7
+null6:
+error("null pointer")
+program7:
+v14 = [this + 0]
+v14 = [v14 + 8]
+v15 = 50
+v16 = call v14(this v15)
+print(v16)
+v17 = 55
+return v17
+func LSPrint(this) 
+v18 = 1
+j = v18
+goto program8
+program8:
+label1:
+size = [this + 8]
+v23 = j < size
+v19 = v23
+v20 = 1
+if0 v19 goto label2
+number = [this + 4]
+v26 = [number + 0]
+v27 = 1
+v28 = v26 - v27
+v29 = v28 < j
+if0 v29 goto program9
+error("array index out of bounds")
+program9:
+v32 = 4
+v35 = 1
+v34 = v35 + j
+v33 = v32 * v34
+v30 = number + v33
+v31 = [v30 + 0]
+print(v31)
+v36 = 1
+v37 = j + v36
+j = v37
+goto program10
+program10:
+goto label1
+label2:
+v38 = 0
+return v38
+func LSSearch(this num) 
+v39 = 1
+j = v39
+goto program11
+program11:
+v40 = 0
+ls01 = v40
+goto program12
+program12:
+v41 = 0
+ifound = v41
+goto program13
+program13:
+label4:
+size = [this + 8]
+v46 = j < size
+v42 = v46
+v43 = 1
+if0 v42 goto label5
+number = [this + 4]
+v49 = [number + 0]
+v50 = 1
+v51 = v49 - v50
+v52 = v51 < j
+if0 v52 goto program14
+error("array index out of bounds")
+program14:
+v55 = 4
+v58 = 1
+v57 = v58 + j
+v56 = v55 * v57
+v53 = number + v56
+v54 = [v53 + 0]
+aux01 = v54
+goto program15
+program15:
+v59 = 1
+v60 = num + v59
+aux02 = v60
+goto program16
+program16:
+v61 = aux01 < num
+v62 = v61
+if0 v62 goto label6
+v63 = 0
+nt = v63
+goto program17
+program17:
+goto label7
+label6:
+v64 = aux01 < aux02
+v65 = 1
+v66 = 0
+if0 v64 goto label8
+v67 = v66
+goto label9
+label8:
+v67 = v65
+label9:
+v68 = v67
+if0 v68 goto label10
+v69 = 0
+nt = v69
+goto program18
+program18:
+goto label11
+label10:
+v70 = 1
+ls01 = v70
+goto program19
+program19:
+v71 = 1
+ifound = v71
+goto program20
+program20:
+size = [this + 8]
+j = [this + 8]
+goto program21
+program21:
+label11:
+label7:
+v74 = 1
+v75 = j + v74
+j = v75
+goto program22
+program22:
+goto label4
+label5:
+return ifound
+func LSInit(this sz) 
+size = [this + 8]
+[this + 8] = sz
+goto program23
+program23:
+number = [this + 4]
+v80 = 4
+v81 = sz * v80
+v82 = v81 + v80
+v83 = alloc(v82)
+[v83 + 0] = sz
+[this + 4] = v83
+goto program24
+program24:
+v84 = 1
+j = v84
+goto program25
+program25:
+size = [this + 8]
+v87 = 1
+v88 = size + v87
+k = v88
+goto program26
+program26:
+label13:
+size = [this + 8]
+v93 = j < size
+v89 = v93
+v90 = 1
+if0 v89 goto label14
+v94 = 2
+v95 = v94 * j
+aux01 = v95
+goto program27
+program27:
+v96 = 3
+v97 = k - v96
+aux02 = v97
+goto program28
+program28:
+number = [this + 4]
+v100 = aux01 + aux02 // correct
+v101 = [number + 0] // len
+v102 = 1
+v103 = v101 - v102
+v104 = v103 < j
+if0 v104 goto program29
+error("array index out of bounds")
+program29:
+v107 = 4
+v110 = 1
+v109 = v110 + j
+v108 = v107 * v109
+v105 = number + v108
+[v105 + 0] = v100
+v111 = 1
+v112 = j + v111
+j = v112
+goto program30
+program30:
+v113 = 1
+v114 = k - v113
+k = v114
+goto program31
+program31:
+goto label13
+label14:
+v115 = 0
+return v115
+
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.7/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1s
+2 actionable tasks: 1 executed, 1 up-to-date

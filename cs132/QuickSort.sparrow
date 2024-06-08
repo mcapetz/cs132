@@ -1,0 +1,747 @@
+func Main()
+v423 = 12
+w0 = alloc(v423)
+v424 = 16
+vmt_QS = alloc(v424)
+v425 = @QSStart
+[vmt_QS + 0] = v425
+v426 = @QSSort
+[vmt_QS + 4] = v426
+v427 = @QSPrint
+[vmt_QS + 8] = v427
+v428 = @QSInit
+[vmt_QS + 12] = v428
+[w0 + 0] = vmt_QS
+v429 = 0
+[w0 + 4] = v429
+v430 = 0
+[w0 + 8] = v430
+if0 w0 goto null8
+goto program59
+null8:
+error("null pointer")
+program59:
+w1 = [w0 + 0] 
+w1 = [w1 + 0]
+v431 = 10
+v433 = 12
+w2 = call w1(w0 v431)
+print(w2)
+goto main_end
+main_end:
+v434 = 0 
+return v434
+func QSStart(this sz) 
+if0 this goto null1
+goto program0
+null1:
+error("null pointer")
+program0:
+v0 = [this + 0]
+v0 = [v0 + 12]
+v1 = call v0(this sz)
+aux01 = v1
+goto program1
+program1:
+if0 this goto null2
+goto program2
+null2:
+error("null pointer")
+program2:
+v2 = [this + 0]
+v2 = [v2 + 8]
+v3 = call v2(this)
+aux01 = v3
+goto program3
+program3:
+v4 = 9999
+print(v4)
+size = [this + 8]
+v7 = 1
+v8 = size - v7
+aux01 = v8
+goto program4
+program4:
+if0 this goto null3
+goto program5
+null3:
+error("null pointer")
+program5:
+v9 = [this + 0]
+v9 = [v9 + 4]
+v10 = 0
+v11 = call v9(this v10 aux01)
+aux01 = v11
+goto program6
+program6:
+if0 this goto null4
+goto program7
+null4:
+error("null pointer")
+program7:
+v12 = [this + 0]
+v12 = [v12 + 8]
+v13 = call v12(this)
+aux01 = v13
+goto program8
+program8:
+v14 = 0
+return v14
+func QSSort(this left right) 
+v15 = 0
+t = v15
+goto program9
+program9:
+v16 = left < right
+v17 = v16
+if0 v17 goto label1
+number = [this + 4]
+v20 = 0
+v21 = right < v20
+if0 v21 goto label3
+error("array index out of bounds")
+label3:
+v22 = [number + 0]
+v23 = 1
+v24 = v22 - v23
+v25 = v24 < right
+if0 v25 goto program10
+error("array index out of bounds")
+program10:
+v28 = 4
+v31 = 1
+v30 = v31 + right
+v29 = v28 * v30
+v26 = number + v29
+v27 = [v26 + 0]
+v = v27
+goto program11
+program11:
+v32 = 1
+v33 = left - v32
+i = v33
+goto program12
+program12:
+j = right
+goto program13
+program13:
+v34 = 1
+cont01 = v34
+goto program14
+program14:
+label4:
+v35 = cont01
+v36 = 1
+if0 v35 goto label5
+v37 = 1
+cont02 = v37
+goto program15
+program15:
+label6:
+v38 = cont02
+v39 = 1
+if0 v38 goto label7
+v40 = 1
+v41 = i + v40
+i = v41
+goto program16
+program16:
+number = [this + 4]
+v44 = 0
+v45 = i < v44
+if0 v45 goto label8
+error("array index out of bounds")
+label8:
+v46 = [number + 0]
+v47 = 1
+v48 = v46 - v47
+v49 = v48 < i
+if0 v49 goto program17
+error("array index out of bounds")
+program17:
+v52 = 4
+v55 = 1
+v54 = v55 + i
+v53 = v52 * v54
+v50 = number + v53
+v51 = [v50 + 0]
+aux03 = v51
+goto program18
+program18:
+v56 = aux03 < v
+v57 = 1
+v58 = 0
+if0 v56 goto label9
+v59 = v58
+goto label10
+label9:
+v59 = v57
+label10:
+v60 = v59
+if0 v60 goto label11
+v61 = 0
+cont02 = v61
+goto program19
+program19:
+goto label12
+label11:
+v62 = 1
+cont02 = v62
+goto program20
+program20:
+label12:
+goto label6
+label7:
+v63 = 1
+cont02 = v63
+goto program21
+program21:
+label13:
+v64 = cont02
+v65 = 1
+if0 v64 goto label14
+v66 = 1
+v67 = j - v66
+j = v67
+goto program22
+program22:
+number = [this + 4]
+v70 = 0
+v71 = j < v70
+if0 v71 goto label15
+error("array index out of bounds")
+label15:
+v72 = [number + 0]
+v73 = 1
+v74 = v72 - v73
+v75 = v74 < j
+if0 v75 goto program23
+error("array index out of bounds")
+program23:
+v78 = 4
+v81 = 1
+v80 = v81 + j
+v79 = v78 * v80
+v76 = number + v79
+v77 = [v76 + 0]
+aux03 = v77
+goto program24
+program24:
+v82 = v < aux03
+v83 = 1
+v84 = 0
+if0 v82 goto label16
+v85 = v84
+goto label17
+label16:
+v85 = v83
+label17:
+v86 = v85
+if0 v86 goto label18
+v87 = 0
+cont02 = v87
+goto program25
+program25:
+goto label19
+label18:
+v88 = 1
+cont02 = v88
+goto program26
+program26:
+label19:
+goto label13
+label14:
+number = [this + 4]
+v91 = 0
+v92 = i < v91
+if0 v92 goto label20
+error("array index out of bounds")
+label20:
+v93 = [number + 0]
+v94 = 1
+v95 = v93 - v94
+v96 = v95 < i
+if0 v96 goto program27
+error("array index out of bounds")
+program27:
+v99 = 4
+v102 = 1
+v101 = v102 + i
+v100 = v99 * v101
+v97 = number + v100
+v98 = [v97 + 0]
+t = v98
+goto program28
+program28:
+number = [this + 4]
+number = [this + 4]
+v107 = 0
+v108 = j < v107
+if0 v108 goto label21
+error("array index out of bounds")
+label21:
+v109 = [number + 0]
+v110 = 1
+v111 = v109 - v110
+v112 = v111 < j
+if0 v112 goto program29
+error("array index out of bounds")
+program29:
+v115 = 4
+v118 = 1
+v117 = v118 + j
+v116 = v115 * v117
+v113 = number + v116
+v114 = [v113 + 0]
+v119 = 0
+v120 = i < v119
+if0 v120 goto label22
+error("array index out of bounds")
+label22:
+v121 = [number + 0]
+v122 = 1
+v123 = v121 - v122
+v124 = v123 < i
+if0 v124 goto program30
+error("array index out of bounds")
+program30:
+v127 = 4
+v130 = 1
+v129 = v130 + i
+v128 = v127 * v129
+v125 = number + v128
+[v125 + 0] = v114
+number = [this + 4]
+v133 = 0
+v134 = j < v133
+if0 v134 goto label23
+error("array index out of bounds")
+label23:
+v135 = [number + 0]
+v136 = 1
+v137 = v135 - v136
+v138 = v137 < j
+if0 v138 goto program31
+error("array index out of bounds")
+program31:
+v141 = 4
+v144 = 1
+v143 = v144 + j
+v142 = v141 * v143
+v139 = number + v142
+[v139 + 0] = t
+v145 = 1
+v146 = i + v145
+v147 = j < v146
+v148 = v147
+if0 v148 goto label24
+v149 = 0
+cont01 = v149
+goto program32
+program32:
+goto label25
+label24:
+v150 = 1
+cont01 = v150
+goto program33
+program33:
+label25:
+goto label4
+label5:
+number = [this + 4]
+number = [this + 4]
+v155 = 0
+v156 = i < v155
+if0 v156 goto label26
+error("array index out of bounds")
+label26:
+v157 = [number + 0]
+v158 = 1
+v159 = v157 - v158
+v160 = v159 < i
+if0 v160 goto program34
+error("array index out of bounds")
+program34:
+v163 = 4
+v166 = 1
+v165 = v166 + i
+v164 = v163 * v165
+v161 = number + v164
+v162 = [v161 + 0]
+v167 = 0
+v168 = j < v167
+if0 v168 goto label27
+error("array index out of bounds")
+label27:
+v169 = [number + 0]
+v170 = 1
+v171 = v169 - v170
+v172 = v171 < j
+if0 v172 goto program35
+error("array index out of bounds")
+program35:
+v175 = 4
+v178 = 1
+v177 = v178 + j
+v176 = v175 * v177
+v173 = number + v176
+[v173 + 0] = v162
+number = [this + 4]
+number = [this + 4]
+v183 = 0
+v184 = right < v183
+if0 v184 goto label28
+error("array index out of bounds")
+label28:
+v185 = [number + 0]
+v186 = 1
+v187 = v185 - v186
+v188 = v187 < right
+if0 v188 goto program36
+error("array index out of bounds")
+program36:
+v191 = 4
+v194 = 1
+v193 = v194 + right
+v192 = v191 * v193
+v189 = number + v192
+v190 = [v189 + 0]
+v195 = 0
+v196 = i < v195
+if0 v196 goto label29
+error("array index out of bounds")
+label29:
+v197 = [number + 0]
+v198 = 1
+v199 = v197 - v198
+v200 = v199 < i
+if0 v200 goto program37
+error("array index out of bounds")
+program37:
+v203 = 4
+v206 = 1
+v205 = v206 + i
+v204 = v203 * v205
+v201 = number + v204
+[v201 + 0] = v190
+number = [this + 4]
+v209 = 0
+v210 = right < v209
+if0 v210 goto label30
+error("array index out of bounds")
+label30:
+v211 = [number + 0]
+v212 = 1
+v213 = v211 - v212
+v214 = v213 < right
+if0 v214 goto program38
+error("array index out of bounds")
+program38:
+v217 = 4
+v220 = 1
+v219 = v220 + right
+v218 = v217 * v219
+v215 = number + v218
+[v215 + 0] = t
+if0 this goto null5
+goto program39
+null5:
+error("null pointer")
+program39:
+v221 = [this + 0]
+v221 = [v221 + 4]
+v222 = 1
+v223 = i - v222
+v224 = call v221(this left v223)
+nt = v224
+goto program40
+program40:
+if0 this goto null6
+goto program41
+null6:
+error("null pointer")
+program41:
+v225 = [this + 0]
+v225 = [v225 + 4]
+v226 = 1
+v227 = i + v226
+v228 = call v225(this v227 right)
+nt = v228
+goto program42
+program42:
+goto label2
+label1:
+v229 = 0
+nt = v229
+goto program43
+program43:
+label2:
+v230 = 0
+return v230
+func QSPrint(this) 
+v231 = 0
+j = v231
+goto program44
+program44:
+label32:
+size = [this + 8]
+v236 = j < size
+v232 = v236
+v233 = 1
+if0 v232 goto label33
+number = [this + 4]
+v239 = 0
+v240 = j < v239
+if0 v240 goto label34
+error("array index out of bounds")
+label34:
+v241 = [number + 0]
+v242 = 1
+v243 = v241 - v242
+v244 = v243 < j
+if0 v244 goto program45
+error("array index out of bounds")
+program45:
+v247 = 4
+v250 = 1
+v249 = v250 + j
+v248 = v247 * v249
+v245 = number + v248
+v246 = [v245 + 0]
+print(v246)
+v251 = 1
+v252 = j + v251
+j = v252
+goto program46
+program46:
+goto label32
+label33:
+v253 = 0
+return v253
+func QSInit(this sz) 
+size = [this + 8]
+[this + 8] = sz
+goto program47
+program47:
+number = [this + 4]
+v258 = 4
+v259 = sz * v258
+v260 = v259 + v258
+v261 = alloc(v260)
+[v261 + 0] = sz
+[this + 4] = v261
+goto program48
+program48:
+number = [this + 4]
+v264 = 0
+v265 = 20
+v266 = 0
+v267 = v264 < v266
+if0 v267 goto label36
+error("array index out of bounds")
+label36:
+v268 = [number + 0]
+v269 = 1
+v270 = v268 - v269
+v271 = v270 < v264
+if0 v271 goto program49
+error("array index out of bounds")
+program49:
+v274 = 4
+v277 = 1
+v276 = v277 + v264
+v275 = v274 * v276
+v272 = number + v275
+[v272 + 0] = v265
+number = [this + 4]
+v280 = 1
+v281 = 7
+v282 = 0
+v283 = v280 < v282
+if0 v283 goto label37
+error("array index out of bounds")
+label37:
+v284 = [number + 0]
+v285 = 1
+v286 = v284 - v285
+v287 = v286 < v280
+if0 v287 goto program50
+error("array index out of bounds")
+program50:
+v290 = 4
+v293 = 1
+v292 = v293 + v280
+v291 = v290 * v292
+v288 = number + v291
+[v288 + 0] = v281
+number = [this + 4]
+v296 = 2
+v297 = 12
+v298 = 0
+v299 = v296 < v298
+if0 v299 goto label38
+error("array index out of bounds")
+label38:
+v300 = [number + 0]
+v301 = 1
+v302 = v300 - v301
+v303 = v302 < v296
+if0 v303 goto program51
+error("array index out of bounds")
+program51:
+v306 = 4
+v309 = 1
+v308 = v309 + v296
+v307 = v306 * v308
+v304 = number + v307
+[v304 + 0] = v297
+number = [this + 4]
+v312 = 3
+v313 = 18
+v314 = 0
+v315 = v312 < v314
+if0 v315 goto label39
+error("array index out of bounds")
+label39:
+v316 = [number + 0]
+v317 = 1
+v318 = v316 - v317
+v319 = v318 < v312
+if0 v319 goto program52
+error("array index out of bounds")
+program52:
+v322 = 4
+v325 = 1
+v324 = v325 + v312
+v323 = v322 * v324
+v320 = number + v323
+[v320 + 0] = v313
+number = [this + 4]
+v328 = 4
+v329 = 2
+v330 = 0
+v331 = v328 < v330
+if0 v331 goto label40
+error("array index out of bounds")
+label40:
+v332 = [number + 0]
+v333 = 1
+v334 = v332 - v333
+v335 = v334 < v328
+if0 v335 goto program53
+error("array index out of bounds")
+program53:
+v338 = 4
+v341 = 1
+v340 = v341 + v328
+v339 = v338 * v340
+v336 = number + v339
+[v336 + 0] = v329
+number = [this + 4]
+v344 = 5
+v345 = 11
+v346 = 0
+v347 = v344 < v346
+if0 v347 goto label41
+error("array index out of bounds")
+label41:
+v348 = [number + 0]
+v349 = 1
+v350 = v348 - v349
+v351 = v350 < v344
+if0 v351 goto program54
+error("array index out of bounds")
+program54:
+v354 = 4
+v357 = 1
+v356 = v357 + v344
+v355 = v354 * v356
+v352 = number + v355
+[v352 + 0] = v345
+number = [this + 4]
+v360 = 6
+v361 = 6
+v362 = 0
+v363 = v360 < v362
+if0 v363 goto label42
+error("array index out of bounds")
+label42:
+v364 = [number + 0]
+v365 = 1
+v366 = v364 - v365
+v367 = v366 < v360
+if0 v367 goto program55
+error("array index out of bounds")
+program55:
+v370 = 4
+v373 = 1
+v372 = v373 + v360
+v371 = v370 * v372
+v368 = number + v371
+[v368 + 0] = v361
+number = [this + 4]
+v376 = 7
+v377 = 9
+v378 = 0
+v379 = v376 < v378
+if0 v379 goto label43
+error("array index out of bounds")
+label43:
+v380 = [number + 0]
+v381 = 1
+v382 = v380 - v381
+v383 = v382 < v376
+if0 v383 goto program56
+error("array index out of bounds")
+program56:
+v386 = 4
+v389 = 1
+v388 = v389 + v376
+v387 = v386 * v388
+v384 = number + v387
+[v384 + 0] = v377
+number = [this + 4]
+v392 = 8
+v393 = 19
+v394 = 0
+v395 = v392 < v394
+if0 v395 goto label44
+error("array index out of bounds")
+label44:
+v396 = [number + 0]
+v397 = 1
+v398 = v396 - v397
+v399 = v398 < v392
+if0 v399 goto program57
+error("array index out of bounds")
+program57:
+v402 = 4
+v405 = 1
+v404 = v405 + v392
+v403 = v402 * v404
+v400 = number + v403
+[v400 + 0] = v393
+number = [this + 4]
+v408 = 9
+v409 = 5
+v410 = 0
+v411 = v408 < v410
+if0 v411 goto label45
+error("array index out of bounds")
+label45:
+v412 = [number + 0]
+v413 = 1
+v414 = v412 - v413
+v415 = v414 < v408
+if0 v415 goto program58
+error("array index out of bounds")
+program58:
+v418 = 4
+v421 = 1
+v420 = v421 + v408
+v419 = v418 * v420
+v416 = number + v419
+[v416 + 0] = v409
+v422 = 0
+return v422
+

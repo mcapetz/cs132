@@ -1,0 +1,51 @@
+func Main()
+t0 = 4
+s1 = alloc(t0)
+t1 = alloc(t0)
+t0 = @FacComputeFac
+[t1 + 0] = t0
+t0 = t1 // addition
+[s1 + 0] = t0
+if0 s1 goto null1
+s2 = [s1 + 0]
+s2 = [s2 + 0]
+t0 = 6
+save_1 = t1
+save_2 = t0
+s3 = call s2(w0 v0)
+t1 = save1
+t0 = save2
+print(s3)
+goto main_end
+null1:
+error("null pointer")
+main_end:
+      return v0
+
+func FacComputeFac(this num)
+stack_1 = s3
+stack_2 = s1
+stack_3 = s2
+stack_4 = s4
+t0 = 1
+s1 = a2 < t0
+if0 s1 goto if1_else
+a4 = 1
+goto if1_end
+if1_else:
+s2 = [a3 + 0]
+s2 = [s2 + 0]
+t0 = 1
+s3 = a2 - t0
+save_1 = t0
+s4 = call s2(this w2)
+t0 = save1
+a4 = a2 * s4
+if1_end:
+s3 = stack_1
+s4 = stack_2
+s1 = stack_3
+s2 = stack_4
+      return num_aux
+
+

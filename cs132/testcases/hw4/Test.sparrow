@@ -1,0 +1,14 @@
+func Main()
+    a = 0
+    c = 0
+    N = 4
+L1:
+    v0 = 1
+    b = a + v0
+    c = c + b
+    v0 = 2
+    a = b * v0
+    v = N - a
+    print(v)
+    if0 v goto L1
+    return c

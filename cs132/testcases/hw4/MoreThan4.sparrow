@@ -1,0 +1,69 @@
+func main()
+id1 = 4
+id0 = alloc(id1)
+if0 id0 goto null_err
+id1 = 8
+MT4vmt = alloc(id1)
+if0 MT4vmt goto null_err
+id2 = @MT4Start
+[MT4vmt + 0] = id2
+id3 = @MT4Change
+[MT4vmt + 4] = id3
+[id0 + 0] = MT4vmt
+if0 id0 goto null_err
+id4 = [id0 + 0]
+id4 = [id4 + 0]
+id6 = 1
+id7 = 2
+id8 = 3
+id9 = 4
+id10 = 5
+id11 = 6
+id5 = call id4(id0 id6 id7 id8 id9 id10 id11)
+print(id5)
+goto main_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+main_end:
+id12 = 0
+      return id12
+
+func MT4Start(this id13 id14 id15 id16 id17 id18)
+print(id13)
+print(id14)
+print(id15)
+print(id16)
+print(id17)
+print(id18)
+if0 this goto null_err
+id20 = [this + 0]
+id20 = [id20 + 4]
+id21 = call id20(this id18 id17 id16 id15 id14 id13)
+id19 = id21
+goto MT4Start_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+MT4Start_end:
+      return id19
+
+func MT4Change(this id22 id23 id24 id25 id26 id27)
+print(id22)
+print(id23)
+print(id24)
+print(id25)
+print(id26)
+print(id27)
+id28 = 0
+goto MT4Change_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+MT4Change_end:
+      return id28
+
+

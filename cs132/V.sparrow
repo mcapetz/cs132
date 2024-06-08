@@ -1,0 +1,52 @@
+func Main()
+v10 = 12
+w0 = alloc(v10)
+v11 = 12
+vmt_C = alloc(v11)
+v12 = @CRun
+[vmt_C + 0] = v12
+v13 = @AHi
+[vmt_C + 4] = v13
+[w0 + 0] = vmt_C
+v14 = 0
+[w0 + 4] = v14
+if0 w0 goto null3
+goto program3
+null3:
+error("null pointer")
+program3:
+w1 = [w0 + 0] 
+w1 = [w1 + 0]
+v16 = 4
+w2 = call w1(w0)
+print(w2)
+goto main_end
+main_end:
+v17 = 0 
+return v17
+func ARun(this) 
+v0 = 10
+return v0
+func AHi(this) 
+v1 = [this + 4]
+v3 = 5
+[this + 4] = v3
+goto program0
+program0:
+v4 = [this + 4]
+return v4
+func CRun(this) 
+if0 this goto null1
+goto program1
+null1:
+error("null pointer")
+program1:
+v6 = [this + 0]
+v6 = [v6 + 4]
+v7 = call v6(this)
+d = v7
+goto program2
+program2:
+v8 = [this + 4]
+return v8
+

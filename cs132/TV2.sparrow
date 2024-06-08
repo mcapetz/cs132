@@ -1,0 +1,1406 @@
+func Main()
+v467 = 4
+w3 = alloc(v467)
+v468 = 4
+vmt_TV = alloc(v468)
+v469 = @TVStart
+[vmt_TV + 0] = v469
+[w3 + 0] = vmt_TV
+if0 w3 goto null26
+goto program197
+null26:
+error("null pointer")
+program197:
+w4 = [w3 + 0] 
+w4 = [w4 + 0]
+v471 = 4
+w5 = call w4(w3)
+print(w5)
+goto main_end
+main_end:
+v472 = 0 
+return v472
+func TVStart(this) 
+v0 = 44
+w0 = alloc(v0)
+v1 = 84
+vmt_Tree = alloc(v1)
+v2 = @TreeInit
+[vmt_Tree + 0] = v2
+v3 = @TreeSetRight
+[vmt_Tree + 4] = v3
+v4 = @TreeSetLeft
+[vmt_Tree + 8] = v4
+v5 = @TreeGetRight
+[vmt_Tree + 12] = v5
+v6 = @TreeGetLeft
+[vmt_Tree + 16] = v6
+v7 = @TreeGetKey
+[vmt_Tree + 20] = v7
+v8 = @TreeSetKey
+[vmt_Tree + 24] = v8
+v9 = @TreeGetHas_Right
+[vmt_Tree + 28] = v9
+v10 = @TreeGetHas_Left
+[vmt_Tree + 32] = v10
+v11 = @TreeSetHas_Left
+[vmt_Tree + 36] = v11
+v12 = @TreeSetHas_Right
+[vmt_Tree + 40] = v12
+v13 = @TreeCompare
+[vmt_Tree + 44] = v13
+v14 = @TreeInsert
+[vmt_Tree + 48] = v14
+v15 = @TreeDelete
+[vmt_Tree + 52] = v15
+v16 = @TreeRemove
+[vmt_Tree + 56] = v16
+v17 = @TreeRemoveRight
+[vmt_Tree + 60] = v17
+v18 = @TreeRemoveLeft
+[vmt_Tree + 64] = v18
+v19 = @TreeSearch
+[vmt_Tree + 68] = v19
+v20 = @TreePrint
+[vmt_Tree + 72] = v20
+v21 = @TreeRecPrint
+[vmt_Tree + 76] = v21
+v22 = @TreeAccept
+[vmt_Tree + 80] = v22
+[w0 + 0] = vmt_Tree
+v23 = 0
+[w0 + 4] = v23
+v24 = 0
+[w0 + 8] = v24
+v25 = 0
+[w0 + 12] = v25
+v26 = 0
+[w0 + 16] = v26
+v27 = 0
+[w0 + 20] = v27
+v28 = 0
+[w0 + 24] = v28
+v29 = 0
+[w0 + 28] = v29
+v30 = 0
+[w0 + 32] = v30
+v31 = 0
+[w0 + 36] = v31
+v32 = 0
+[w0 + 40] = v32
+root = w0
+goto program0
+program0:
+v33 = 16
+goto program1
+program1:
+v34 = [root + 0]
+v34 = [v34 + 0]
+v35 = call v34(root v33)
+ntb = v35
+goto program2
+program2:
+goto program3
+program3:
+v36 = [root + 0]
+v36 = [v36 + 72]
+v37 = call v36(root)
+ntb = v37
+goto program4
+program4:
+v38 = 100000000
+print(v38)
+v39 = 8
+goto program5
+program5:
+v40 = [root + 0]
+v40 = [v40 + 48]
+v41 = call v40(root v39)
+ntb = v41
+goto program6
+program6:
+v42 = 24
+goto program7
+program7:
+v43 = [root + 0]
+v43 = [v43 + 48]
+v44 = call v43(root v42)
+ntb = v44
+goto program8
+program8:
+v45 = 4
+goto program9
+program9:
+v46 = [root + 0]
+v46 = [v46 + 48]
+v47 = call v46(root v45)
+ntb = v47
+goto program10
+program10:
+v48 = 12
+goto program11
+program11:
+v49 = [root + 0]
+v49 = [v49 + 48]
+v50 = call v49(root v48)
+ntb = v50
+goto program12
+program12:
+v51 = 20
+goto program13
+program13:
+v52 = [root + 0]
+v52 = [v52 + 48]
+v53 = call v52(root v51)
+ntb = v53
+goto program14
+program14:
+v54 = 28
+goto program15
+program15:
+v55 = [root + 0]
+v55 = [v55 + 48]
+v56 = call v55(root v54)
+ntb = v56
+goto program16
+program16:
+v57 = 14
+goto program17
+program17:
+v58 = [root + 0]
+v58 = [v58 + 48]
+v59 = call v58(root v57)
+ntb = v59
+goto program18
+program18:
+goto program19
+program19:
+v60 = [root + 0]
+v60 = [v60 + 72]
+v61 = call v60(root)
+ntb = v61
+goto program20
+program20:
+v62 = 100000000
+print(v62)
+v63 = 124
+w1 = alloc(v63)
+v64 = 8
+vmt_MyVisitor = alloc(v64)
+v65 = @MyVisitorVisit
+[vmt_MyVisitor + 0] = v65
+[w1 + 0] = vmt_MyVisitor
+v66 = 0
+[w1 + 4] = v66
+v67 = 0
+[w1 + 8] = v67
+v68 = 0
+[w1 + 12] = v68
+v69 = 0
+[w1 + 16] = v69
+v70 = 0
+[w1 + 20] = v70
+v71 = 0
+[w1 + 24] = v71
+v72 = 0
+[w1 + 28] = v72
+v73 = 0
+[w1 + 32] = v73
+v74 = 0
+[w1 + 36] = v74
+v75 = 0
+[w1 + 40] = v75
+v76 = 0
+[w1 + 44] = v76
+v77 = 0
+[w1 + 48] = v77
+v78 = 0
+[w1 + 52] = v78
+v79 = 0
+[w1 + 56] = v79
+v80 = 0
+[w1 + 60] = v80
+v81 = 0
+[w1 + 64] = v81
+v82 = 0
+[w1 + 68] = v82
+v83 = 0
+[w1 + 72] = v83
+v84 = 0
+[w1 + 76] = v84
+v85 = 0
+[w1 + 80] = v85
+v86 = 0
+[w1 + 84] = v86
+v87 = 0
+[w1 + 88] = v87
+v88 = 0
+[w1 + 92] = v88
+v89 = 0
+[w1 + 96] = v89
+v90 = 0
+[w1 + 100] = v90
+v91 = 0
+[w1 + 104] = v91
+v92 = 0
+[w1 + 108] = v92
+v93 = 0
+[w1 + 112] = v93
+v94 = 0
+[w1 + 116] = v94
+v95 = 0
+[w1 + 120] = v95
+v = w1
+goto program21
+program21:
+v96 = 50000000
+print(v96)
+goto program22
+program22:
+v97 = [root + 0]
+v97 = [v97 + 80]
+v98 = call v97(root v)
+nti = v98
+goto program23
+program23:
+v99 = 100000000
+print(v99)
+v100 = 24
+goto program24
+program24:
+v101 = [root + 0]
+v101 = [v101 + 68]
+v102 = call v101(root v100)
+print(v102)
+v103 = 12
+goto program25
+program25:
+v104 = [root + 0]
+v104 = [v104 + 68]
+v105 = call v104(root v103)
+print(v105)
+v106 = 16
+goto program26
+program26:
+v107 = [root + 0]
+v107 = [v107 + 68]
+v108 = call v107(root v106)
+print(v108)
+v109 = 50
+goto program27
+program27:
+v110 = [root + 0]
+v110 = [v110 + 68]
+v111 = call v110(root v109)
+print(v111)
+v112 = 12
+goto program28
+program28:
+v113 = [root + 0]
+v113 = [v113 + 68]
+v114 = call v113(root v112)
+print(v114)
+v115 = 12
+goto program29
+program29:
+v116 = [root + 0]
+v116 = [v116 + 52]
+v117 = call v116(root v115)
+ntb = v117
+goto program30
+program30:
+goto program31
+program31:
+v118 = [root + 0]
+v118 = [v118 + 72]
+v119 = call v118(root)
+ntb = v119
+goto program32
+program32:
+v120 = 12
+goto program33
+program33:
+v121 = [root + 0]
+v121 = [v121 + 68]
+v122 = call v121(root v120)
+print(v122)
+v123 = 0
+return v123
+func TreeInit(this v_key) 
+key = [this + 28]
+[this + 28] = v_key
+goto program34
+program34:
+has_left = [this + 32]
+v128 = 0
+[this + 32] = v128
+goto program35
+program35:
+has_right = [this + 36]
+v131 = 0
+[this + 36] = v131
+goto program36
+program36:
+v132 = 1
+return v132
+func TreeSetRight(this rn) 
+right = [this + 24]
+[this + 24] = rn
+goto program37
+program37:
+v135 = 1
+return v135
+func TreeSetLeft(this ln) 
+left = [this + 20]
+[this + 20] = ln
+goto program38
+program38:
+v138 = 1
+return v138
+func TreeGetRight(this) 
+right = [this + 24]
+return right
+func TreeGetLeft(this) 
+left = [this + 20]
+return left
+func TreeGetKey(this) 
+key = [this + 28]
+return key
+func TreeSetKey(this v_key) 
+key = [this + 28]
+[this + 28] = v_key
+goto program39
+program39:
+v147 = 1
+return v147
+func TreeGetHas_Right(this) 
+has_right = [this + 36]
+return has_right
+func TreeGetHas_Left(this) 
+has_left = [this + 32]
+return has_left
+func TreeSetHas_Left(this val) 
+has_left = [this + 32]
+[this + 32] = val
+goto program40
+program40:
+v154 = 1
+return v154
+func TreeSetHas_Right(this val) 
+has_right = [this + 36]
+[this + 36] = val
+goto program41
+program41:
+v157 = 1
+return v157
+func TreeCompare(this num1 num2) 
+v158 = 0
+ntb = v158
+goto program42
+program42:
+v159 = 1
+v160 = num2 + v159
+nti = v160
+goto program43
+program43:
+v161 = num1 < num2
+v162 = v161
+if0 v162 goto label12
+v163 = 0
+ntb = v163
+goto program44
+program44:
+goto label13
+label12:
+v164 = num1 < nti
+v165 = 1
+v166 = 0
+if0 v164 goto label14
+v167 = v166
+goto label15
+label14:
+v167 = v165
+label15:
+v168 = v167
+if0 v168 goto label16
+v169 = 0
+ntb = v169
+goto program45
+program45:
+goto label17
+label16:
+v170 = 1
+ntb = v170
+goto program46
+program46:
+label17:
+label13:
+return ntb
+func TreeInsert(this v_key) 
+v171 = 44
+w2 = alloc(v171)
+v172 = 84
+vmt_Tree = alloc(v172)
+v173 = @TreeInit
+[vmt_Tree + 0] = v173
+v174 = @TreeSetRight
+[vmt_Tree + 4] = v174
+v175 = @TreeSetLeft
+[vmt_Tree + 8] = v175
+v176 = @TreeGetRight
+[vmt_Tree + 12] = v176
+v177 = @TreeGetLeft
+[vmt_Tree + 16] = v177
+v178 = @TreeGetKey
+[vmt_Tree + 20] = v178
+v179 = @TreeSetKey
+[vmt_Tree + 24] = v179
+v180 = @TreeGetHas_Right
+[vmt_Tree + 28] = v180
+v181 = @TreeGetHas_Left
+[vmt_Tree + 32] = v181
+v182 = @TreeSetHas_Left
+[vmt_Tree + 36] = v182
+v183 = @TreeSetHas_Right
+[vmt_Tree + 40] = v183
+v184 = @TreeCompare
+[vmt_Tree + 44] = v184
+v185 = @TreeInsert
+[vmt_Tree + 48] = v185
+v186 = @TreeDelete
+[vmt_Tree + 52] = v186
+v187 = @TreeRemove
+[vmt_Tree + 56] = v187
+v188 = @TreeRemoveRight
+[vmt_Tree + 60] = v188
+v189 = @TreeRemoveLeft
+[vmt_Tree + 64] = v189
+v190 = @TreeSearch
+[vmt_Tree + 68] = v190
+v191 = @TreePrint
+[vmt_Tree + 72] = v191
+v192 = @TreeRecPrint
+[vmt_Tree + 76] = v192
+v193 = @TreeAccept
+[vmt_Tree + 80] = v193
+[w2 + 0] = vmt_Tree
+v194 = 0
+[w2 + 4] = v194
+v195 = 0
+[w2 + 8] = v195
+v196 = 0
+[w2 + 12] = v196
+v197 = 0
+[w2 + 16] = v197
+v198 = 0
+[w2 + 20] = v198
+v199 = 0
+[w2 + 24] = v199
+v200 = 0
+[w2 + 28] = v200
+v201 = 0
+[w2 + 32] = v201
+v202 = 0
+[w2 + 36] = v202
+v203 = 0
+[w2 + 40] = v203
+new_node = w2
+goto program47
+program47:
+goto program48
+program48:
+v204 = [new_node + 0]
+v204 = [v204 + 0]
+v205 = call v204(new_node v_key)
+ntb = v205
+goto program49
+program49:
+if0 this goto null7
+current_node = this
+goto program50
+null7:
+error("null pointer")
+program50:
+v206 = 1
+cont = v206
+goto program51
+program51:
+label19:
+v207 = cont
+v208 = 1
+if0 v207 goto label20
+goto program52
+program52:
+v209 = [current_node + 0]
+v209 = [v209 + 20]
+v210 = call v209(current_node)
+key_aux = v210
+goto program53
+program53:
+v211 = v_key < key_aux
+v212 = v211
+if0 v212 goto label21
+goto program54
+program54:
+v213 = [current_node + 0]
+v213 = [v213 + 32]
+v214 = call v213(current_node)
+v215 = v214
+if0 v215 goto label23
+goto program55
+program55:
+v216 = [current_node + 0]
+v216 = [v216 + 16]
+v217 = call v216(current_node)
+current_node = v217
+goto program56
+program56:
+goto label24
+label23:
+v218 = 0
+cont = v218
+goto program57
+program57:
+v219 = 1
+goto program58
+program58:
+v220 = [current_node + 0]
+v220 = [v220 + 36]
+v221 = call v220(current_node v219)
+ntb = v221
+goto program59
+program59:
+goto program60
+program60:
+v222 = [current_node + 0]
+v222 = [v222 + 8]
+v223 = call v222(current_node new_node)
+ntb = v223
+goto program61
+program61:
+label24:
+goto label22
+label21:
+goto program62
+program62:
+v224 = [current_node + 0]
+v224 = [v224 + 28]
+v225 = call v224(current_node)
+v226 = v225
+if0 v226 goto label25
+goto program63
+program63:
+v227 = [current_node + 0]
+v227 = [v227 + 12]
+v228 = call v227(current_node)
+current_node = v228
+goto program64
+program64:
+goto label26
+label25:
+v229 = 0
+cont = v229
+goto program65
+program65:
+v230 = 1
+goto program66
+program66:
+v231 = [current_node + 0]
+v231 = [v231 + 40]
+v232 = call v231(current_node v230)
+ntb = v232
+goto program67
+program67:
+goto program68
+program68:
+v233 = [current_node + 0]
+v233 = [v233 + 4]
+v234 = call v233(current_node new_node)
+ntb = v234
+goto program69
+program69:
+label26:
+label22:
+goto label19
+label20:
+v235 = 1
+return v235
+func TreeDelete(this v_key) 
+if0 this goto null8
+current_node = this
+goto program70
+null8:
+error("null pointer")
+program70:
+if0 this goto null9
+parent_node = this
+goto program71
+null9:
+error("null pointer")
+program71:
+v236 = 1
+cont = v236
+goto program72
+program72:
+v237 = 0
+found = v237
+goto program73
+program73:
+v238 = 1
+is_root = v238
+goto program74
+program74:
+label28:
+v239 = cont
+v240 = 1
+if0 v239 goto label29
+goto program75
+program75:
+v241 = [current_node + 0]
+v241 = [v241 + 20]
+v242 = call v241(current_node)
+key_aux = v242
+goto program76
+program76:
+v243 = v_key < key_aux
+v244 = v243
+if0 v244 goto label30
+goto program77
+program77:
+v245 = [current_node + 0]
+v245 = [v245 + 32]
+v246 = call v245(current_node)
+v247 = v246
+if0 v247 goto label32
+parent_node = current_node
+goto program78
+program78:
+goto program79
+program79:
+v248 = [current_node + 0]
+v248 = [v248 + 16]
+v249 = call v248(current_node)
+current_node = v249
+goto program80
+program80:
+goto label33
+label32:
+v250 = 0
+cont = v250
+goto program81
+program81:
+label33:
+goto label31
+label30:
+v251 = key_aux < v_key
+v252 = v251
+if0 v252 goto label34
+goto program82
+program82:
+v253 = [current_node + 0]
+v253 = [v253 + 28]
+v254 = call v253(current_node)
+v255 = v254
+if0 v255 goto label36
+parent_node = current_node
+goto program83
+program83:
+goto program84
+program84:
+v256 = [current_node + 0]
+v256 = [v256 + 12]
+v257 = call v256(current_node)
+current_node = v257
+goto program85
+program85:
+goto label37
+label36:
+v258 = 0
+cont = v258
+goto program86
+program86:
+label37:
+goto label35
+label34:
+v259 = is_root
+if0 v259 goto label38
+goto program87
+program87:
+v260 = [current_node + 0]
+v260 = [v260 + 28]
+v261 = call v260(current_node)
+v262 = 1
+v263 = 0
+if0 v261 goto label41
+v264 = v263
+goto label42
+label41:
+v264 = v262
+label42:
+v266 = 0
+v265 = 1
+if0 v264 goto label43
+goto program88
+program88:
+v268 = [current_node + 0]
+v268 = [v268 + 32]
+v269 = call v268(current_node)
+v270 = 1
+v271 = 0
+if0 v269 goto label46
+v272 = v271
+goto label47
+label46:
+v272 = v270
+label47:
+if0 v272 goto label43
+v267 = v265
+goto label45
+label43:
+v267 = v266
+label45:
+v273 = v267
+if0 v273 goto label48
+v274 = 1
+ntb = v274
+goto program89
+program89:
+goto label49
+label48:
+if0 this goto null10
+goto program90
+null10:
+error("null pointer")
+program90:
+v275 = [this + 0]
+v275 = [v275 + 56]
+v276 = call v275(this parent_node current_node)
+ntb = v276
+goto program91
+program91:
+label49:
+goto label39
+label38:
+if0 this goto null11
+goto program92
+null11:
+error("null pointer")
+program92:
+v277 = [this + 0]
+v277 = [v277 + 56]
+v278 = call v277(this parent_node current_node)
+ntb = v278
+goto program93
+program93:
+label39:
+v279 = 1
+found = v279
+goto program94
+program94:
+v280 = 0
+cont = v280
+goto program95
+program95:
+label35:
+label31:
+v281 = 0
+is_root = v281
+goto program96
+program96:
+goto label28
+label29:
+return found
+func TreeRemove(this p_node c_node) 
+goto program97
+program97:
+v282 = [c_node + 0]
+v282 = [v282 + 32]
+v283 = call v282(c_node)
+v284 = v283
+if0 v284 goto label51
+if0 this goto null12
+goto program98
+null12:
+error("null pointer")
+program98:
+v285 = [this + 0]
+v285 = [v285 + 64]
+v286 = call v285(this p_node c_node)
+ntb = v286
+goto program99
+program99:
+goto label52
+label51:
+goto program100
+program100:
+v287 = [c_node + 0]
+v287 = [v287 + 28]
+v288 = call v287(c_node)
+v289 = v288
+if0 v289 goto label53
+if0 this goto null13
+goto program101
+null13:
+error("null pointer")
+program101:
+v290 = [this + 0]
+v290 = [v290 + 60]
+v291 = call v290(this p_node c_node)
+ntb = v291
+goto program102
+program102:
+goto label54
+label53:
+goto program103
+program103:
+v292 = [c_node + 0]
+v292 = [v292 + 20]
+v293 = call v292(c_node)
+auxkey1 = v293
+goto program104
+program104:
+goto program105
+program105:
+v294 = [p_node + 0]
+v294 = [v294 + 16]
+v295 = call v294(p_node)
+goto program106
+program106:
+v297 = [v295 + 0]
+v297 = [v297 + 20]
+v298 = call v297(v295)
+auxkey2 = v298
+goto program107
+program107:
+if0 this goto null14
+goto program108
+null14:
+error("null pointer")
+program108:
+v299 = [this + 0]
+v299 = [v299 + 44]
+v300 = call v299(this auxkey1 auxkey2)
+v301 = v300
+if0 v301 goto label55
+my_null = [this + 40]
+goto program109
+program109:
+v304 = [p_node + 0]
+v304 = [v304 + 8]
+v305 = call v304(p_node my_null)
+ntb = v305
+goto program110
+program110:
+v306 = 0
+goto program111
+program111:
+v307 = [p_node + 0]
+v307 = [v307 + 36]
+v308 = call v307(p_node v306)
+ntb = v308
+goto program112
+program112:
+goto label56
+label55:
+my_null = [this + 40]
+goto program113
+program113:
+v311 = [p_node + 0]
+v311 = [v311 + 4]
+v312 = call v311(p_node my_null)
+ntb = v312
+goto program114
+program114:
+v313 = 0
+goto program115
+program115:
+v314 = [p_node + 0]
+v314 = [v314 + 40]
+v315 = call v314(p_node v313)
+ntb = v315
+goto program116
+program116:
+label56:
+label54:
+label52:
+v316 = 1
+return v316
+func TreeRemoveRight(this p_node c_node) 
+label58:
+goto program117
+program117:
+v319 = [c_node + 0]
+v319 = [v319 + 28]
+v320 = call v319(c_node)
+v317 = v320
+v318 = 1
+if0 v317 goto label59
+goto program118
+program118:
+v321 = [c_node + 0]
+v321 = [v321 + 12]
+v322 = call v321(c_node)
+goto program119
+program119:
+v324 = [v322 + 0]
+v324 = [v324 + 20]
+v325 = call v324(v322)
+goto program120
+program120:
+v326 = [c_node + 0]
+v326 = [v326 + 24]
+v327 = call v326(c_node v325)
+ntb = v327
+goto program121
+program121:
+p_node = c_node
+goto program122
+program122:
+goto program123
+program123:
+v328 = [c_node + 0]
+v328 = [v328 + 12]
+v329 = call v328(c_node)
+c_node = v329
+goto program124
+program124:
+goto label58
+label59:
+my_null = [this + 40]
+goto program125
+program125:
+v332 = [p_node + 0]
+v332 = [v332 + 4]
+v333 = call v332(p_node my_null)
+ntb = v333
+goto program126
+program126:
+v334 = 0
+goto program127
+program127:
+v335 = [p_node + 0]
+v335 = [v335 + 40]
+v336 = call v335(p_node v334)
+ntb = v336
+goto program128
+program128:
+v337 = 1
+return v337
+func TreeRemoveLeft(this p_node c_node) 
+label61:
+goto program129
+program129:
+v340 = [c_node + 0]
+v340 = [v340 + 32]
+v341 = call v340(c_node)
+v338 = v341
+v339 = 1
+if0 v338 goto label62
+goto program130
+program130:
+v342 = [c_node + 0]
+v342 = [v342 + 16]
+v343 = call v342(c_node)
+goto program131
+program131:
+v345 = [v343 + 0]
+v345 = [v345 + 20]
+v346 = call v345(v343)
+goto program132
+program132:
+v347 = [c_node + 0]
+v347 = [v347 + 24]
+v348 = call v347(c_node v346)
+ntb = v348
+goto program133
+program133:
+p_node = c_node
+goto program134
+program134:
+goto program135
+program135:
+v349 = [c_node + 0]
+v349 = [v349 + 16]
+v350 = call v349(c_node)
+c_node = v350
+goto program136
+program136:
+goto label61
+label62:
+my_null = [this + 40]
+goto program137
+program137:
+v353 = [p_node + 0]
+v353 = [v353 + 8]
+v354 = call v353(p_node my_null)
+ntb = v354
+goto program138
+program138:
+v355 = 0
+goto program139
+program139:
+v356 = [p_node + 0]
+v356 = [v356 + 36]
+v357 = call v356(p_node v355)
+ntb = v357
+goto program140
+program140:
+v358 = 1
+return v358
+func TreeSearch(this v_key) 
+if0 this goto null15
+current_node = this
+goto program141
+null15:
+error("null pointer")
+program141:
+v359 = 1
+cont = v359
+goto program142
+program142:
+v360 = 0
+ifound = v360
+goto program143
+program143:
+label64:
+v361 = cont
+v362 = 1
+if0 v361 goto label65
+goto program144
+program144:
+v363 = [current_node + 0]
+v363 = [v363 + 20]
+v364 = call v363(current_node)
+key_aux = v364
+goto program145
+program145:
+v365 = v_key < key_aux
+v366 = v365
+if0 v366 goto label66
+goto program146
+program146:
+v367 = [current_node + 0]
+v367 = [v367 + 32]
+v368 = call v367(current_node)
+v369 = v368
+if0 v369 goto label68
+goto program147
+program147:
+v370 = [current_node + 0]
+v370 = [v370 + 16]
+v371 = call v370(current_node)
+current_node = v371
+goto program148
+program148:
+goto label69
+label68:
+v372 = 0
+cont = v372
+goto program149
+program149:
+label69:
+goto label67
+label66:
+v373 = key_aux < v_key
+v374 = v373
+if0 v374 goto label70
+goto program150
+program150:
+v375 = [current_node + 0]
+v375 = [v375 + 28]
+v376 = call v375(current_node)
+v377 = v376
+if0 v377 goto label72
+goto program151
+program151:
+v378 = [current_node + 0]
+v378 = [v378 + 12]
+v379 = call v378(current_node)
+current_node = v379
+goto program152
+program152:
+goto label73
+label72:
+v380 = 0
+cont = v380
+goto program153
+program153:
+label73:
+goto label71
+label70:
+v381 = 1
+ifound = v381
+goto program154
+program154:
+v382 = 0
+cont = v382
+goto program155
+program155:
+label71:
+label67:
+goto label64
+label65:
+return ifound
+func TreePrint(this) 
+if0 this goto null16
+current_node = this
+goto program156
+null16:
+error("null pointer")
+program156:
+if0 this goto null17
+goto program157
+null17:
+error("null pointer")
+program157:
+v383 = [this + 0]
+v383 = [v383 + 76]
+v384 = call v383(this current_node)
+ntb = v384
+goto program158
+program158:
+v385 = 1
+return v385
+func TreeRecPrint(this node) 
+goto program159
+program159:
+v386 = [node + 0]
+v386 = [v386 + 32]
+v387 = call v386(node)
+v388 = v387
+if0 v388 goto label76
+goto program160
+program160:
+v389 = [node + 0]
+v389 = [v389 + 16]
+v390 = call v389(node)
+if0 this goto null18
+goto program161
+null18:
+error("null pointer")
+program161:
+v391 = [this + 0]
+v391 = [v391 + 76]
+v392 = call v391(this v390)
+ntb = v392
+goto program162
+program162:
+goto label77
+label76:
+v393 = 1
+ntb = v393
+goto program163
+program163:
+label77:
+goto program164
+program164:
+v394 = [node + 0]
+v394 = [v394 + 20]
+v395 = call v394(node)
+print(v395)
+goto program165
+program165:
+v396 = [node + 0]
+v396 = [v396 + 28]
+v397 = call v396(node)
+v398 = v397
+if0 v398 goto label78
+goto program166
+program166:
+v399 = [node + 0]
+v399 = [v399 + 12]
+v400 = call v399(node)
+if0 this goto null19
+goto program167
+null19:
+error("null pointer")
+program167:
+v401 = [this + 0]
+v401 = [v401 + 76]
+v402 = call v401(this v400)
+ntb = v402
+goto program168
+program168:
+goto label79
+label78:
+v403 = 1
+ntb = v403
+goto program169
+program169:
+label79:
+v404 = 1
+return v404
+func TreeAccept(this v) 
+v405 = 333
+print(v405)
+if0 this goto null20
+v = [this + 16]
+goto program170
+null20:
+error("null pointer")
+program170:
+v408 = [v + 0]
+v408 = [v408 + 0]
+v409 = call v408(v this)
+nti = v409
+goto program171
+program171:
+v410 = 222
+print(v410)
+v411 = 0
+return v411
+func VisitorVisit(this n) 
+v412 = 111
+print(v412)
+goto program172
+program172:
+v413 = [n + 0]
+v413 = [v413 + 28]
+v414 = call v413(n)
+v415 = v414
+if0 v415 goto label82
+r = [this + 116]
+goto program173
+program173:
+v418 = [n + 0]
+v418 = [v418 + 12]
+v419 = call v418(n)
+[this + 116] = v419
+goto program174
+program174:
+if0 this goto null21
+r = [this + 116]
+goto program175
+null21:
+error("null pointer")
+program175:
+v422 = [r + 0]
+v422 = [v422 + 80]
+v423 = call v422(r this)
+nti = v423
+goto program176
+program176:
+goto label83
+label82:
+v424 = 0
+nti = v424
+goto program177
+program177:
+label83:
+goto program178
+program178:
+v425 = [n + 0]
+v425 = [v425 + 32]
+v426 = call v425(n)
+v427 = v426
+if0 v427 goto label84
+l = [this + 112]
+goto program179
+program179:
+v430 = [n + 0]
+v430 = [v430 + 16]
+v431 = call v430(n)
+[this + 112] = v431
+goto program180
+program180:
+if0 this goto null22
+l = [this + 112]
+goto program181
+null22:
+error("null pointer")
+program181:
+v434 = [l + 0]
+v434 = [v434 + 80]
+v435 = call v434(l this)
+nti = v435
+goto program182
+program182:
+goto label85
+label84:
+v436 = 0
+nti = v436
+goto program183
+program183:
+label85:
+v437 = 0
+return v437
+func MyVisitorVisit(this n) 
+goto program184
+program184:
+v438 = [n + 0]
+v438 = [v438 + 28]
+v439 = call v438(n)
+v440 = v439
+if0 v440 goto label87
+r = [this + 116]
+goto program185
+program185:
+v443 = [n + 0]
+v443 = [v443 + 12]
+v444 = call v443(n)
+[this + 116] = v444
+goto program186
+program186:
+if0 this goto null23
+r = [this + 116]
+goto program187
+null23:
+error("null pointer")
+program187:
+v448 = [r + 0]
+v448 = [v448 + 80]
+v449 = call v448(r this)
+nti = v449
+goto program188
+program188:
+goto label88
+label87:
+v450 = 0
+nti = v450
+goto program189
+program189:
+label88:
+goto program190
+program190:
+v451 = [n + 0]
+v451 = [v451 + 20]
+v452 = call v451(n)
+print(v452)
+goto program191
+program191:
+v453 = [n + 0]
+v453 = [v453 + 32]
+v454 = call v453(n)
+v455 = v454
+if0 v455 goto label89
+l = [this + 112]
+goto program192
+program192:
+v458 = [n + 0]
+v458 = [v458 + 16]
+v459 = call v458(n)
+[this + 112] = v459
+goto program193
+program193:
+if0 this goto null24
+l = [this + 112]
+goto program194
+null24:
+error("null pointer")
+program194:
+v463 = [l + 0]
+v463 = [v463 + 80]
+v464 = call v463(l this)
+nti = v464
+goto program195
+program195:
+goto label90
+label89:
+v465 = 0
+nti = v465
+goto program196
+program196:
+label90:
+v466 = 0
+return v466
+

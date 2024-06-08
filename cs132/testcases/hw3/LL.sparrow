@@ -1,0 +1,1048 @@
+func Main()
+v341 = 84
+w7 = alloc(v341)
+v342 = 4
+vmt_LL = alloc(v342)
+v343 = @LLStart
+[vmt_LL + 0] = v343
+[w7 + 0] = vmt_LL
+v344 = 0
+[w7 + 4] = v344
+v345 = 0
+[w7 + 8] = v345
+v346 = 0
+[w7 + 12] = v346
+v347 = 0
+[w7 + 16] = v347
+v348 = 0
+[w7 + 20] = v348
+v349 = 0
+[w7 + 24] = v349
+v350 = 0
+[w7 + 28] = v350
+v351 = 0
+[w7 + 32] = v351
+v352 = 0
+[w7 + 36] = v352
+v353 = 0
+[w7 + 40] = v353
+v354 = 0
+[w7 + 44] = v354
+v355 = 0
+[w7 + 48] = v355
+v356 = 0
+[w7 + 52] = v356
+v357 = 0
+[w7 + 56] = v357
+v358 = 0
+[w7 + 60] = v358
+v359 = 0
+[w7 + 64] = v359
+v360 = 0
+[w7 + 68] = v360
+v361 = 0
+[w7 + 72] = v361
+v362 = 0
+[w7 + 76] = v362
+v363 = 0
+[w7 + 80] = v363
+if0 w7 goto null24
+goto program129
+null24:
+error("null pointer")
+program129:
+w8 = [w7 + 0] 
+w8 = [w8 + 0]
+v365 = 84
+w9 = call w8(w7)
+print(w9)
+goto main_end
+main_end:
+v366 = 0 
+return v366
+func ElementInit(this v_Age v_Salary v_Married) 
+Age = [this + 4]
+[this + 4] = v_Age
+goto program0
+program0:
+Salary = [this + 8]
+[this + 8] = v_Salary
+goto program1
+program1:
+Married = [this + 12]
+[this + 12] = v_Married
+goto program2
+program2:
+v6 = 1
+return v6
+func ElementGetAge(this) 
+Age = [this + 4]
+return Age
+func ElementGetSalary(this) 
+Salary = [this + 8]
+return Salary
+func ElementGetMarried(this) 
+Married = [this + 12]
+return Married
+func ElementEqual(this other) 
+v13 = 1
+ret_val = v13
+goto program3
+program3:
+goto program4
+program4:
+v14 = [other + 0]
+v14 = [v14 + 4]
+v15 = call v14(other)
+aux01 = v15
+goto program5
+program5:
+if0 this goto null1
+goto program6
+null1:
+error("null pointer")
+program6:
+v16 = [this + 0]
+v16 = [v16 + 20]
+Age = [this + 4]
+v19 = call v16(this aux01 Age)
+v20 = 1
+v21 = 0
+if0 v19 goto label4
+v22 = v21
+goto label5
+label4:
+v22 = v20
+label5:
+v23 = v22
+if0 v23 goto label6
+v24 = 0
+ret_val = v24
+goto program7
+program7:
+goto label7
+label6:
+goto program8
+program8:
+v25 = [other + 0]
+v25 = [v25 + 8]
+v26 = call v25(other)
+aux02 = v26
+goto program9
+program9:
+if0 this goto null2
+goto program10
+null2:
+error("null pointer")
+program10:
+v27 = [this + 0]
+v27 = [v27 + 20]
+Salary = [this + 8]
+v30 = call v27(this aux02 Salary)
+v31 = 1
+v32 = 0
+if0 v30 goto label8
+v33 = v32
+goto label9
+label8:
+v33 = v31
+label9:
+v34 = v33
+if0 v34 goto label10
+v35 = 0
+ret_val = v35
+goto program11
+program11:
+goto label11
+label10:
+Married = [this + 12]
+v38 = Married
+if0 v38 goto label12
+goto program12
+program12:
+v39 = [other + 0]
+v39 = [v39 + 12]
+v40 = call v39(other)
+v41 = 1
+v42 = 0
+if0 v40 goto label14
+v43 = v42
+goto label15
+label14:
+v43 = v41
+label15:
+v44 = v43
+if0 v44 goto label16
+v45 = 0
+ret_val = v45
+goto program13
+program13:
+goto label17
+label16:
+v46 = 0
+nt = v46
+goto program14
+program14:
+label17:
+goto label13
+label12:
+goto program15
+program15:
+v47 = [other + 0]
+v47 = [v47 + 12]
+v48 = call v47(other)
+v49 = v48
+if0 v49 goto label18
+v50 = 0
+ret_val = v50
+goto program16
+program16:
+goto label19
+label18:
+v51 = 0
+nt = v51
+goto program17
+program17:
+label19:
+label13:
+label11:
+label7:
+return ret_val
+func ElementCompare(this num1 num2) 
+v52 = 0
+retval = v52
+goto program18
+program18:
+v53 = 1
+v54 = num2 + v53
+aux02 = v54
+goto program19
+program19:
+v55 = num1 < num2
+v56 = v55
+if0 v56 goto label21
+v57 = 0
+retval = v57
+goto program20
+program20:
+goto label22
+label21:
+v58 = num1 < aux02
+v59 = 1
+v60 = 0
+if0 v58 goto label23
+v61 = v60
+goto label24
+label23:
+v61 = v59
+label24:
+v62 = v61
+if0 v62 goto label25
+v63 = 0
+retval = v63
+goto program21
+program21:
+goto label26
+label25:
+v64 = 1
+retval = v64
+goto program22
+program22:
+label26:
+label22:
+return retval
+func ListInit(this) 
+end = [this + 36]
+v67 = 1
+[this + 36] = v67
+goto program23
+program23:
+v68 = 1
+return v68
+func ListInitNew(this v_elem v_next v_end) 
+end = [this + 36]
+[this + 36] = v_end
+goto program24
+program24:
+elem = [this + 28]
+[this + 28] = v_elem
+goto program25
+program25:
+next = [this + 32]
+[this + 32] = v_next
+goto program26
+program26:
+v75 = 1
+return v75
+func ListInsert(this new_elem) 
+if0 this goto null3
+aux03 = this
+goto program27
+null3:
+error("null pointer")
+program27:
+v76 = 40
+w0 = alloc(v76)
+v77 = 40
+vmt_List = alloc(v77)
+v78 = @ListInit
+[vmt_List + 0] = v78
+v79 = @ListInitNew
+[vmt_List + 4] = v79
+v80 = @ListInsert
+[vmt_List + 8] = v80
+v81 = @ListSetNext
+[vmt_List + 12] = v81
+v82 = @ListDelete
+[vmt_List + 16] = v82
+v83 = @ListSearch
+[vmt_List + 20] = v83
+v84 = @ListGetEnd
+[vmt_List + 24] = v84
+v85 = @ListGetElem
+[vmt_List + 28] = v85
+v86 = @ListGetNext
+[vmt_List + 32] = v86
+v87 = @ListPrint
+[vmt_List + 36] = v87
+[w0 + 0] = vmt_List
+v88 = 0
+[w0 + 4] = v88
+v89 = 0
+[w0 + 8] = v89
+v90 = 0
+[w0 + 12] = v90
+v91 = 0
+[w0 + 16] = v91
+v92 = 0
+[w0 + 20] = v92
+v93 = 0
+[w0 + 24] = v93
+v94 = 0
+[w0 + 28] = v94
+v95 = 0
+[w0 + 32] = v95
+v96 = 0
+[w0 + 36] = v96
+aux02 = w0
+goto program28
+program28:
+goto program29
+program29:
+v97 = [aux02 + 0]
+v97 = [v97 + 4]
+v98 = 0
+v99 = call v97(aux02 new_elem aux03 v98)
+ret_val = v99
+goto program30
+program30:
+return aux02
+func ListSetNext(this v_next) 
+next = [this + 32]
+[this + 32] = v_next
+goto program31
+program31:
+v102 = 1
+return v102
+func ListDelete(this e) 
+if0 this goto null6
+my_head = this
+goto program32
+null6:
+error("null pointer")
+program32:
+v103 = 0
+ret_val = v103
+goto program33
+program33:
+v104 = 0
+v105 = 1
+v106 = v104 - v105
+aux04 = v106
+goto program34
+program34:
+if0 this goto null7
+aux01 = this
+goto program35
+null7:
+error("null pointer")
+program35:
+if0 this goto null8
+prev = this
+goto program36
+null8:
+error("null pointer")
+program36:
+end = [this + 36]
+var_end = [this + 36]
+goto program37
+program37:
+elem = [this + 28]
+var_elem = [this + 28]
+goto program38
+program38:
+label32:
+v113 = 1
+v114 = 0
+if0 var_end goto label35
+v115 = v114
+goto label36
+label35:
+v115 = v113
+label36:
+v117 = 0
+v116 = 1
+if0 v115 goto label37
+v119 = 1
+v120 = 0
+if0 ret_val goto label40
+v121 = v120
+goto label41
+label40:
+v121 = v119
+label41:
+if0 v121 goto label37
+v118 = v116
+goto label39
+label37:
+v118 = v117
+label39:
+v111 = v118
+v112 = 1
+if0 v111 goto label33
+goto program39
+program39:
+v122 = [e + 0]
+v122 = [v122 + 16]
+v123 = call v122(e var_elem)
+v124 = v123
+if0 v124 goto label42
+v125 = 1
+ret_val = v125
+goto program40
+program40:
+v126 = 0
+v127 = aux04 < v126
+v128 = v127
+if0 v128 goto label44
+goto program41
+program41:
+v129 = [aux01 + 0]
+v129 = [v129 + 32]
+v130 = call v129(aux01)
+my_head = v130
+goto program42
+program42:
+goto label45
+label44:
+v131 = 0
+v132 = 555
+v133 = v131 - v132
+print(v133)
+goto program43
+program43:
+v134 = [prev + 0]
+v134 = [v134 + 12]
+goto program44
+program44:
+v135 = [aux01 + 0]
+v135 = [v135 + 32]
+v136 = call v135(aux01)
+v137 = call v134(prev v136)
+aux05 = v137 // ok here
+goto program45
+program45:
+v138 = 0
+v139 = 555
+v140 = v138 - v139
+print(v140)
+label45:
+goto label43
+label42:
+v141 = 0
+nt = v141
+goto program46
+program46:
+label43:
+v142 = 1
+v143 = 0
+if0 ret_val goto label46
+v144 = v143
+goto label47
+label46:
+v144 = v142
+label47:
+v145 = v144
+if0 v145 goto label48
+prev = aux01
+goto program47
+program47:
+goto program48
+program48:
+v146 = [aux01 + 0]
+v146 = [v146 + 32]
+v147 = call v146(aux01)
+aux01 = v147
+goto program49
+program49:
+goto program50
+program50:
+v148 = [aux01 + 0]
+v148 = [v148 + 24]
+v149 = call v148(aux01)
+var_end = v149
+goto program51
+program51:
+goto program52
+program52:
+v150 = [aux01 + 0]
+v150 = [v150 + 28]
+v151 = call v150(aux01)
+var_elem = v151
+goto program53
+program53:
+v152 = 1
+aux04 = v152
+goto program54
+program54:
+goto label49
+label48:
+v153 = 0
+nt = v153
+goto program55
+program55:
+label49:
+goto label32
+label33:
+return my_head
+func ListSearch(this e) 
+v154 = 0
+int_ret_val = v154
+goto program56
+program56:
+if0 this goto null9
+aux01 = this
+goto program57
+null9:
+error("null pointer")
+program57:
+end = [this + 36]
+var_end = [this + 36]
+goto program58
+program58:
+elem = [this + 28]
+var_elem = [this + 28]
+goto program59
+program59:
+label51:
+v161 = 1
+v162 = 0
+if0 var_end goto label53
+v163 = v162
+goto label54
+label53:
+v163 = v161
+label54:
+v159 = v163
+v160 = 1
+if0 v159 goto label52
+goto program60
+program60:
+v164 = [e + 0]
+v164 = [v164 + 16]
+v165 = call v164(e var_elem)
+v166 = v165
+if0 v166 goto label55
+v167 = 1
+int_ret_val = v167
+goto program61
+program61:
+goto label56
+label55:
+v168 = 0
+nt = v168
+goto program62
+program62:
+label56:
+goto program63
+program63:
+v169 = [aux01 + 0]
+v169 = [v169 + 32]
+v170 = call v169(aux01)
+aux01 = v170
+goto program64
+program64:
+goto program65
+program65:
+v171 = [aux01 + 0]
+v171 = [v171 + 24]
+v172 = call v171(aux01)
+var_end = v172
+goto program66
+program66:
+goto program67
+program67:
+v173 = [aux01 + 0]
+v173 = [v173 + 28]
+v174 = call v173(aux01)
+var_elem = v174
+goto program68
+program68:
+goto label51
+label52:
+return int_ret_val
+func ListGetEnd(this) 
+end = [this + 36]
+return end
+func ListGetElem(this) 
+elem = [this + 28]
+return elem
+func ListGetNext(this) 
+next = [this + 32]
+return next
+func ListPrint(this) 
+if0 this goto null10
+aux01 = this
+goto program69
+null10:
+error("null pointer")
+program69:
+end = [this + 36]
+var_end = [this + 36]
+goto program70
+program70:
+elem = [this + 28]
+var_elem = [this + 28]
+goto program71
+program71:
+label61:
+v187 = 1
+v188 = 0
+if0 var_end goto label63
+v189 = v188
+goto label64
+label63:
+v189 = v187
+label64:
+v185 = v189
+v186 = 1
+if0 v185 goto label62
+goto program72
+program72:
+v190 = [var_elem + 0]
+v190 = [v190 + 4]
+v191 = call v190(var_elem)
+print(v191)
+goto program73
+program73:
+v192 = [aux01 + 0]
+v192 = [v192 + 32]
+v193 = call v192(aux01)
+aux01 = v193
+goto program74
+program74:
+goto program75
+program75:
+v194 = [aux01 + 0]
+v194 = [v194 + 24]
+v195 = call v194(aux01)
+var_end = v195
+goto program76
+program76:
+goto program77
+program77:
+v196 = [aux01 + 0]
+v196 = [v196 + 28]
+v197 = call v196(aux01)
+var_elem = v197
+goto program78
+program78:
+goto label61
+label62:
+v198 = 1
+return v198
+func LLStart(this) 
+v199 = 40
+w1 = alloc(v199)
+v200 = 40
+vmt_List = alloc(v200)
+v201 = @ListInit
+[vmt_List + 0] = v201
+v202 = @ListInitNew
+[vmt_List + 4] = v202
+v203 = @ListInsert
+[vmt_List + 8] = v203
+v204 = @ListSetNext
+[vmt_List + 12] = v204
+v205 = @ListDelete
+[vmt_List + 16] = v205
+v206 = @ListSearch
+[vmt_List + 20] = v206
+v207 = @ListGetEnd
+[vmt_List + 24] = v207
+v208 = @ListGetElem
+[vmt_List + 28] = v208
+v209 = @ListGetNext
+[vmt_List + 32] = v209
+v210 = @ListPrint
+[vmt_List + 36] = v210
+[w1 + 0] = vmt_List
+v211 = 0
+[w1 + 4] = v211
+v212 = 0
+[w1 + 8] = v212
+v213 = 0
+[w1 + 12] = v213
+v214 = 0
+[w1 + 16] = v214
+v215 = 0
+[w1 + 20] = v215
+v216 = 0
+[w1 + 24] = v216
+v217 = 0
+[w1 + 28] = v217
+v218 = 0
+[w1 + 32] = v218
+v219 = 0
+[w1 + 36] = v219
+last_elem = w1
+goto program79
+program79:
+goto program80
+program80:
+v220 = [last_elem + 0]
+v220 = [v220 + 0]
+v221 = call v220(last_elem)
+aux01 = v221
+goto program81
+program81:
+head = last_elem
+goto program82
+program82:
+goto program83
+program83:
+v222 = [head + 0]
+v222 = [v222 + 0]
+v223 = call v222(head)
+aux01 = v223
+goto program84
+program84:
+goto program85
+program85:
+v224 = [head + 0]
+v224 = [v224 + 36]
+v225 = call v224(head)
+aux01 = v225
+goto program86
+program86:
+v226 = 16
+w2 = alloc(v226)
+v227 = 24
+vmt_Element = alloc(v227)
+v228 = @ElementInit
+[vmt_Element + 0] = v228
+v229 = @ElementGetAge
+[vmt_Element + 4] = v229
+v230 = @ElementGetSalary
+[vmt_Element + 8] = v230
+v231 = @ElementGetMarried
+[vmt_Element + 12] = v231
+v232 = @ElementEqual
+[vmt_Element + 16] = v232
+v233 = @ElementCompare
+[vmt_Element + 20] = v233
+[w2 + 0] = vmt_Element
+v234 = 0
+[w2 + 4] = v234
+v235 = 0
+[w2 + 8] = v235
+v236 = 0
+[w2 + 12] = v236
+el01 = w2
+goto program87
+program87:
+goto program88
+program88:
+v237 = [el01 + 0]
+v237 = [v237 + 0]
+v238 = 25
+v239 = 37000
+v240 = 0
+v241 = call v237(el01 v238 v239 v240)
+aux01 = v241
+goto program89
+program89:
+goto program90
+program90:
+v242 = [head + 0]
+v242 = [v242 + 8]
+v243 = call v242(head el01)
+head = v243
+goto program91
+program91:
+goto program92
+program92:
+v244 = [head + 0]
+v244 = [v244 + 36]
+v245 = call v244(head)
+aux01 = v245
+goto program93
+program93:
+v246 = 10000000
+print(v246)
+v247 = 16
+w3 = alloc(v247)
+v248 = 24
+vmt_Element = alloc(v248)
+v249 = @ElementInit
+[vmt_Element + 0] = v249
+v250 = @ElementGetAge
+[vmt_Element + 4] = v250
+v251 = @ElementGetSalary
+[vmt_Element + 8] = v251
+v252 = @ElementGetMarried
+[vmt_Element + 12] = v252
+v253 = @ElementEqual
+[vmt_Element + 16] = v253
+v254 = @ElementCompare
+[vmt_Element + 20] = v254
+[w3 + 0] = vmt_Element
+v255 = 0
+[w3 + 4] = v255
+v256 = 0
+[w3 + 8] = v256
+v257 = 0
+[w3 + 12] = v257
+el01 = w3
+goto program94
+program94:
+goto program95
+program95:
+v258 = [el01 + 0]
+v258 = [v258 + 0]
+v259 = 39
+v260 = 42000
+v261 = 1
+v262 = call v258(el01 v259 v260 v261)
+aux01 = v262
+goto program96
+program96:
+el02 = el01
+goto program97
+program97:
+goto program98
+program98:
+v263 = [head + 0]
+v263 = [v263 + 8]
+v264 = call v263(head el01)
+head = v264
+goto program99
+program99:
+goto program100
+program100:
+v265 = [head + 0]
+v265 = [v265 + 36]
+v266 = call v265(head)
+aux01 = v266
+goto program101
+program101:
+v267 = 10000000
+print(v267)
+v268 = 16
+w4 = alloc(v268)
+v269 = 24
+vmt_Element = alloc(v269)
+v270 = @ElementInit
+[vmt_Element + 0] = v270
+v271 = @ElementGetAge
+[vmt_Element + 4] = v271
+v272 = @ElementGetSalary
+[vmt_Element + 8] = v272
+v273 = @ElementGetMarried
+[vmt_Element + 12] = v273
+v274 = @ElementEqual
+[vmt_Element + 16] = v274
+v275 = @ElementCompare
+[vmt_Element + 20] = v275
+[w4 + 0] = vmt_Element
+v276 = 0
+[w4 + 4] = v276
+v277 = 0
+[w4 + 8] = v277
+v278 = 0
+[w4 + 12] = v278
+el01 = w4
+goto program102
+program102:
+goto program103
+program103:
+v279 = [el01 + 0]
+v279 = [v279 + 0]
+v280 = 22
+v281 = 34000
+v282 = 0
+v283 = call v279(el01 v280 v281 v282)
+aux01 = v283
+goto program104
+program104:
+goto program105
+program105:
+v284 = [head + 0]
+v284 = [v284 + 8]
+v285 = call v284(head el01)
+head = v285
+goto program106
+program106:
+goto program107
+program107:
+v286 = [head + 0]
+v286 = [v286 + 36]
+v287 = call v286(head)
+aux01 = v287
+goto program108
+program108:
+v288 = 16
+w5 = alloc(v288)
+v289 = 24
+vmt_Element = alloc(v289)
+v290 = @ElementInit
+[vmt_Element + 0] = v290
+v291 = @ElementGetAge
+[vmt_Element + 4] = v291
+v292 = @ElementGetSalary
+[vmt_Element + 8] = v292
+v293 = @ElementGetMarried
+[vmt_Element + 12] = v293
+v294 = @ElementEqual
+[vmt_Element + 16] = v294
+v295 = @ElementCompare
+[vmt_Element + 20] = v295
+[w5 + 0] = vmt_Element
+v296 = 0
+[w5 + 4] = v296
+v297 = 0
+[w5 + 8] = v297
+v298 = 0
+[w5 + 12] = v298
+el03 = w5
+goto program109
+program109:
+goto program110
+program110:
+v299 = [el03 + 0]
+v299 = [v299 + 0]
+v300 = 27
+v301 = 34000
+v302 = 0
+v303 = call v299(el03 v300 v301 v302)
+aux01 = v303
+goto program111
+program111:
+goto program112
+program112:
+v304 = [head + 0]
+v304 = [v304 + 20]
+v305 = call v304(head el02)
+print(v305)
+goto program113
+program113:
+v306 = [head + 0]
+v306 = [v306 + 20]
+v307 = call v306(head el03)
+print(v307)
+v308 = 10000000
+print(v308)
+v309 = 16
+w6 = alloc(v309)
+v310 = 24
+vmt_Element = alloc(v310)
+v311 = @ElementInit
+[vmt_Element + 0] = v311
+v312 = @ElementGetAge
+[vmt_Element + 4] = v312
+v313 = @ElementGetSalary
+[vmt_Element + 8] = v313
+v314 = @ElementGetMarried
+[vmt_Element + 12] = v314
+v315 = @ElementEqual
+[vmt_Element + 16] = v315
+v316 = @ElementCompare
+[vmt_Element + 20] = v316
+[w6 + 0] = vmt_Element
+v317 = 0
+[w6 + 4] = v317
+v318 = 0
+[w6 + 8] = v318
+v319 = 0
+[w6 + 12] = v319
+el01 = w6
+goto program114
+program114:
+goto program115
+program115:
+v320 = [el01 + 0]
+v320 = [v320 + 0]
+v321 = 28
+v322 = 35000
+v323 = 0
+v324 = call v320(el01 v321 v322 v323)
+aux01 = v324
+goto program116
+program116:
+goto program117
+program117:
+v325 = [head + 0]
+v325 = [v325 + 8]
+v326 = call v325(head el01)
+head = v326
+goto program118
+program118:
+goto program119
+program119:
+v327 = [head + 0]
+v327 = [v327 + 36]
+v328 = call v327(head)
+aux01 = v328
+goto program120
+program120:
+v329 = 2220000
+print(v329)
+goto program121
+program121:
+v330 = [head + 0]
+v330 = [v330 + 16]
+v331 = call v330(head el02)
+head = v331
+goto program122
+program122:
+goto program123
+program123:
+v332 = [head + 0]
+v332 = [v332 + 36]
+v333 = call v332(head)
+aux01 = v333
+goto program124
+program124:
+v334 = 33300000
+print(v334)
+goto program125
+program125:
+v335 = [head + 0]
+v335 = [v335 + 16]
+v336 = call v335(head el01)
+head = v336
+goto program126
+program126:
+goto program127
+program127:
+v337 = [head + 0]
+v337 = [v337 + 36]
+v338 = call v337(head)
+aux01 = v338
+goto program128
+program128:
+v339 = 44440000
+print(v339)
+v340 = 0
+return v340
+

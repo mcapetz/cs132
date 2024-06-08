@@ -1,0 +1,7 @@
+1c1,4
+< ./grade.sh: line 155: 5s: command not found
+---
+> 100
+> 40464
+> 80770
+> 121302

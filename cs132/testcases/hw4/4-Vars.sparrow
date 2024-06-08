@@ -1,0 +1,63 @@
+func main()
+id1 = 4
+id0 = alloc(id1)
+if0 id0 goto null_err
+id1 = 8
+Avmt = alloc(id1)
+if0 Avmt goto null_err
+id2 = @Ahelper
+[Avmt + 0] = id2
+id3 = @Arun
+[Avmt + 4] = id3
+[id0 + 0] = Avmt
+if0 id0 goto null_err
+id4 = [id0 + 0]
+id4 = [id4 + 4]
+id5 = call id4(id0)
+print(id5)
+goto main_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+main_end:
+id6 = 0
+      return id6
+
+func Arun(this)
+if0 this goto null_err
+id9 = [this + 0]
+id9 = [id9 + 0]
+id11 = 12
+id10 = call id9(this id11)
+id7 = id10
+if0 this goto null_err
+id12 = [this + 0]
+id12 = [id12 + 0]
+id14 = 15
+id13 = call id12(this id14)
+id8 = id13
+id15 = id7 + id8
+goto Arun_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+Arun_end:
+      return id15
+
+func Ahelper(this id16)
+id17 = id16
+id19 = 1
+id18 = id16 + id19
+id16 = id18
+print(id17)
+goto Ahelper_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds")
+Ahelper_end:
+      return id17
+
+

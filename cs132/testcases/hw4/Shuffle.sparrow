@@ -1,0 +1,30 @@
+func main()
+id1 = 1
+id2 = 2
+id3 = 3
+id4 = 4
+id5 = 5
+id6 = 6
+fcall = @f
+id7 = call fcall(id1 id2 id3 id4 id5 id6)
+return id1
+
+func f(x1 x2 x3 x4 x5 x6)
+print(x1)
+print(x2)
+print(x3)
+print(x4)
+print(x5)
+print(x6)
+fcall = @g
+id1 = call fcall(x6 x5 x4 x3 x2 x1)
+return x1
+
+func g(v1 v2 v3 v4 v5 v6)
+print(v1)
+print(v2)
+print(v3)
+print(v4)
+print(v5)
+print(v6)
+return v1

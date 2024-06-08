@@ -1,0 +1,82 @@
+func Main()
+    v0 = 0
+    v1 = 1
+    v2 = 2
+    v3 = 3
+    v4 = 4
+    v5 = 5
+    v6 = 6
+    v7 = 7
+    v8 = 8
+    v9 = 9
+    v10 = 10
+    v11 = 11
+    v12 = 12
+    v13 = 13
+    v14 = 14
+    v15 = 15
+    v16 = 16
+    v17 = 17
+    v18 = 18
+    v19 = 19
+    v0 = 4
+    w0 = alloc(v0)
+    vmt = alloc(v0)
+    v0 = @f
+    [vmt + 0] = v0
+    v0 = vmt
+    [w0 + 0] = v0
+    if0 w0 goto null1
+    w1 = [w0 + 0]
+    w1 = [w1 + 0]
+    w2 = call w1(w0 v1 v2 v3 v4 v5 v6 v7)
+    print(w2)
+    v19 = v19 + v18
+    v17 = v17 + v16
+    v15 = v15 + v14
+    v13 = v13 + v12
+    v11 = v11 + v10
+    v9 = v9 + v8
+    v7 = v7 + v6
+    v5 = v5 + v4
+    v3 = v2 + v1
+    goto main_end
+    null1:
+        error("null pointer")
+    main_end:
+        return v0
+
+func f(this n1 n2 n3 n4 n5 n6 n7)
+    v0 = 4
+    w0 = alloc(v0)
+    vmt = alloc(v0)
+    v0 = @g
+    [vmt + 0] = v0
+    v0 = vmt
+    [w0 + 0] = v0
+    if0 w0 goto null1
+    w1 = [w0 + 0]
+    w1 = [w1 + 0]
+    w2 = call w1(w0 n7 n6 n5 n4 n3 n2 n1)
+    print(n1)
+    print(n2)
+    print(n3)
+    print(n4)
+    print(n5)
+    print(n6)
+    print(n7)
+    goto f_end
+    null1:
+        error("null pointer")
+    f_end:
+        return n1
+
+func g(this n1 n2 n3 n4 n5 n6 n7)
+    print(n1)
+    print(n2)
+    print(n3)
+    print(n4)
+    print(n5)
+    print(n6)
+    print(n7)
+    return n1

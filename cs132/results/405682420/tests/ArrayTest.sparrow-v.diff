@@ -1,0 +1,10 @@
+1c1,7
+< ./grade.sh: line 155: 5s: command not found
+---
+> 5
+> 4
+> 3
+> 2
+> 1
+> 0
+> array index out of bounds

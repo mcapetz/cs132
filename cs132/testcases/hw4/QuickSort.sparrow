@@ -1,0 +1,608 @@
+func main()
+id1 = 12
+id0 = alloc(id1)
+if0 id0 goto null_err
+id1 = 16
+QSvmt = alloc(id1)
+if0 QSvmt goto null_err
+id2 = @QSPrint
+[QSvmt + 0] = id2
+id3 = @QSInit
+[QSvmt + 4] = id3
+id4 = @QSStart
+[QSvmt + 8] = id4
+id5 = @QSSort
+[QSvmt + 12] = id5
+[id0 + 0] = QSvmt
+if0 id0 goto null_err
+id6 = [id0 + 0]
+id6 = [id6 + 8]
+id8 = 10
+id7 = call id6(id0 id8)
+print(id7)
+goto main_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds 1")
+main_end:
+id9 = 0
+      return id9
+
+func QSStart(this id10)
+if0 this goto null_err
+id12 = [this + 0]
+id12 = [id12 + 4]
+id13 = call id12(this id10)
+id11 = id13
+if0 this goto null_err
+id14 = [this + 0]
+id14 = [id14 + 0]
+id15 = call id14(this)
+id11 = id15
+id16 = 9999
+print(id16)
+id18 = [this + 8]
+id19 = 1
+id17 = id18 - id19
+id11 = id17
+if0 this goto null_err
+id20 = [this + 0]
+id20 = [id20 + 12]
+id22 = 0
+id21 = call id20(this id22 id11)
+id11 = id21
+if0 this goto null_err
+id23 = [this + 0]
+id23 = [id23 + 0]
+id24 = call id23(this)
+id11 = id24
+id25 = 0
+goto QSStart_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds 2")
+QSStart_end:
+      return id25
+
+func QSSort(this id26 id27)
+id36 = 0
+id32 = id36
+id37 = id26 < id27
+if0 id37 goto elseid37
+id39 = [this + 4]
+if0 id39 goto null_err
+id40 = [id39 + 0]
+id41 = 1
+id42 = 0
+id42 = id42 - id41
+id43 = id42 < id27
+if0 id43 goto array_err1
+id43 = id27 < id40
+if0 id43 goto array_err1
+id44 = 4
+id45 = id27 + id41
+id45 = id45 * id44
+id46 = id39 + id45
+id38 = [id46 + 0]
+id28 = id38
+id48 = 1
+id47 = id26 - id48
+id29 = id47
+id30 = id27
+id49 = 1
+id33 = id49
+loopid50:
+if0 id33 goto endid50
+id51 = 1
+id34 = id51
+loopid52:
+if0 id34 goto endid52
+id54 = 1
+id53 = id29 + id54
+id29 = id53
+id56 = [this + 4]
+if0 id56 goto null_err
+id57 = [id56 + 0]
+id58 = 1
+id59 = 0
+id59 = id59 - id58
+id60 = id59 < id29
+if0 id60 goto array_err2
+id60 = id29 < id57
+if0 id60 goto array_err2
+id61 = 4
+id62 = id29 + id58
+id62 = id62 * id61
+id63 = id56 + id62
+id55 = [id63 + 0]
+id35 = id55
+id65 = id35 < id28
+id66 = 1
+id64 = id66 - id65
+if0 id64 goto elseid64
+id67 = 0
+id34 = id67
+goto endid64
+elseid64:
+id68 = 1
+id34 = id68
+endid64:
+goto loopid52
+endid52:
+id69 = 1
+id34 = id69
+loopid70:
+if0 id34 goto endid70
+id72 = 1
+id71 = id30 - id72
+id30 = id71
+id74 = [this + 4]
+if0 id74 goto null_err
+id75 = [id74 + 0]
+print(id75) // size of arr
+id76 = 1
+id77 = 0
+id77 = id77 - id76
+id78 = id77 < id30
+if0 id78 goto array_err3
+id78 = id30 < id75
+if0 id78 goto array_err3
+id79 = 4
+id80 = id30 + id76
+id80 = id80 * id79
+id81 = id74 + id80
+id73 = [id81 + 0]
+id35 = id73
+id83 = id28 < id35
+id84 = 1
+id82 = id84 - id83
+if0 id82 goto elseid82
+id85 = 0
+id34 = id85
+goto endid82
+elseid82:
+id86 = 1
+id34 = id86
+endid82:
+goto loopid70
+endid70:
+id88 = [this + 4]
+print(id88)
+print(id88)
+if0 id88 goto null_err
+id89 = [id88 + 0]
+print(id89)
+id90 = 1
+id91 = 0
+id91 = id91 - id90
+id92 = id91 < id29
+if0 id92 goto array_err4
+id92 = id29 < id89
+if0 id92 goto array_err4
+id93 = 4
+id94 = id29 + id90
+id94 = id94 * id93
+id95 = id88 + id94
+id87 = [id95 + 0]
+id32 = id87
+print(id32)
+id96 = [this + 4]
+id98 = [this + 4]
+if0 id98 goto null_err
+id99 = [id98 + 0]
+id100 = 1
+id101 = 0
+id101 = id101 - id100
+id102 = id101 < id30
+if0 id102 goto array_err5
+id102 = id30 < id99
+if0 id102 goto array_err5
+id103 = 4
+id104 = id30 + id100
+id104 = id104 * id103
+id105 = id98 + id104
+id97 = [id105 + 0]
+if0 id96 goto null_err
+id106 = [id96 + 0]
+id107 = 1
+id108 = 0
+id108 = id108 - id107
+id109 = id108 < id29
+if0 id109 goto array_err6
+id109 = id29 < id106
+if0 id109 goto array_err6
+id110 = 4
+id111 = id29 + id107
+id111 = id111 * id110
+id112 = id96 + id111
+[id112 + 0] = id97
+id113 = [this + 4]
+if0 id113 goto null_err
+id114 = [id113 + 0]
+id115 = 1
+id116 = 0
+id116 = id116 - id115
+id117 = id116 < id30
+if0 id117 goto array_err7
+id117 = id30 < id114
+if0 id117 goto array_err7
+id118 = 4
+id119 = id30 + id115
+id119 = id119 * id118
+id120 = id113 + id119
+[id120 + 0] = id32
+id123 = 1
+id122 = id29 + id123
+id121 = id30 < id122
+if0 id121 goto elseid121
+id124 = 0
+id33 = id124
+goto endid121
+elseid121:
+id125 = 1
+id33 = id125
+endid121:
+goto loopid50
+endid50:
+id126 = [this + 4]
+id128 = [this + 4]
+if0 id128 goto null_err
+id129 = [id128 + 0]
+id130 = 1
+id131 = 0
+id131 = id131 - id130
+id132 = id131 < id29
+if0 id132 goto array_err8
+id132 = id29 < id129
+if0 id132 goto array_err8
+id133 = 4
+id134 = id29 + id130
+id134 = id134 * id133
+id135 = id128 + id134
+id127 = [id135 + 0]
+if0 id126 goto null_err
+id136 = [id126 + 0]
+id137 = 1
+id138 = 0
+id138 = id138 - id137
+id139 = id138 < id30
+if0 id139 goto array_err9
+id139 = id30 < id136
+if0 id139 goto array_err9
+id140 = 4
+id141 = id30 + id137
+id141 = id141 * id140
+id142 = id126 + id141
+[id142 + 0] = id127
+id143 = [this + 4]
+id145 = [this + 4]
+if0 id145 goto null_err
+id146 = [id145 + 0]
+id147 = 1
+id148 = 0
+id148 = id148 - id147
+id149 = id148 < id27
+if0 id149 goto array_err10
+id149 = id27 < id146
+if0 id149 goto array_err10
+id150 = 4
+id151 = id27 + id147
+id151 = id151 * id150
+id152 = id145 + id151
+id144 = [id152 + 0]
+if0 id143 goto null_err
+id153 = [id143 + 0]
+id154 = 1
+id155 = 0
+id155 = id155 - id154
+id156 = id155 < id29
+if0 id156 goto array_err11
+id156 = id29 < id153
+if0 id156 goto array_err11
+id157 = 4
+id158 = id29 + id154
+id158 = id158 * id157
+id159 = id143 + id158
+[id159 + 0] = id144
+id160 = [this + 4]
+if0 id160 goto null_err
+id161 = [id160 + 0]
+id162 = 1
+id163 = 0
+id163 = id163 - id162
+id164 = id163 < id27
+if0 id164 goto array_err12
+id164 = id27 < id161
+if0 id164 goto array_err12
+id165 = 4
+id166 = id27 + id162
+id166 = id166 * id165
+id167 = id160 + id166
+[id167 + 0] = id32
+if0 this goto null_err
+id168 = [this + 0]
+id168 = [id168 + 12]
+id171 = 1
+id170 = id29 - id171
+id169 = call id168(this id26 id170)
+id31 = id169
+if0 this goto null_err
+id172 = [this + 0]
+id172 = [id172 + 12]
+id175 = 1
+id174 = id29 + id175
+id173 = call id172(this id174 id27)
+id31 = id173
+goto endid37
+elseid37:
+id176 = 0
+id31 = id176
+endid37:
+id177 = 0
+goto QSSort_end
+null_err:
+error("null pointer")
+array_err1:
+error("array index out of bounds 100")
+array_err2:
+error("array index out of bounds 200")
+array_err3:
+error("array index out of bounds 300")
+array_err4:
+error("array index out of bounds 400")
+array_err5:
+error("array index out of bounds 500")
+array_err6:
+error("array index out of bounds 600")
+array_err7:
+error("array index out of bounds 700")
+array_err8:
+error("array index out of bounds 800")
+array_err9:
+error("array index out of bounds 900")
+array_err10:
+error("array index out of bounds 1000")
+array_err11:
+error("array index out of bounds 1100")
+array_err12:
+error("array index out of bounds 1200")
+array_err:
+error("array index out of bounds 3")
+QSSort_end:
+      return id177
+
+func QSPrint(this)
+id179 = 0
+id178 = id179
+loopid180:
+id182 = [this + 8]
+id181 = id178 < id182
+if0 id181 goto endid180
+id184 = [this + 4]
+if0 id184 goto null_err
+id185 = [id184 + 0]
+id186 = 1
+id187 = 0
+id187 = id187 - id186
+id188 = id187 < id178
+if0 id188 goto array_err
+id188 = id178 < id185
+if0 id188 goto array_err
+id189 = 4
+id190 = id178 + id186
+id190 = id190 * id189
+id191 = id184 + id190
+id183 = [id191 + 0]
+print(id183)
+id193 = 1
+id192 = id178 + id193
+id178 = id192
+goto loopid180
+endid180:
+id194 = 0
+goto QSPrint_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds 4")
+QSPrint_end:
+      return id194
+
+func QSInit(this id195)
+id196 = [this + 8]
+[this + 8] = id195
+id197 = [this + 4]
+id199 = 0
+id200 = id195 < id199
+id199 = 1
+id200 = id199 - id200
+if0 id200 goto array_err
+id201 = id195 + id199
+id199 = 4
+id201 = id199 * id201
+id198 = alloc(id201)
+if0 id198 goto null_err
+[id198 + 0] = id195
+[this + 4] = id198
+id202 = [this + 4]
+id203 = 0
+id204 = 20
+if0 id202 goto null_err
+id205 = [id202 + 0]
+id206 = 1
+id207 = 0
+id207 = id207 - id206
+id208 = id207 < id203
+if0 id208 goto array_err
+id208 = id203 < id205
+if0 id208 goto array_err
+id209 = 4
+id210 = id203 + id206
+id210 = id210 * id209
+id211 = id202 + id210
+[id211 + 0] = id204
+id212 = [this + 4]
+id213 = 1
+id214 = 7
+if0 id212 goto null_err
+id215 = [id212 + 0]
+id216 = 1
+id217 = 0
+id217 = id217 - id216
+id218 = id217 < id213
+if0 id218 goto array_err
+id218 = id213 < id215
+if0 id218 goto array_err
+id219 = 4
+id220 = id213 + id216
+id220 = id220 * id219
+id221 = id212 + id220
+[id221 + 0] = id214
+id222 = [this + 4]
+id223 = 2
+id224 = 12
+if0 id222 goto null_err
+id225 = [id222 + 0]
+id226 = 1
+id227 = 0
+id227 = id227 - id226
+id228 = id227 < id223
+if0 id228 goto array_err
+id228 = id223 < id225
+if0 id228 goto array_err
+id229 = 4
+id230 = id223 + id226
+id230 = id230 * id229
+id231 = id222 + id230
+[id231 + 0] = id224
+id232 = [this + 4]
+id233 = 3
+id234 = 18
+if0 id232 goto null_err
+id235 = [id232 + 0]
+id236 = 1
+id237 = 0
+id237 = id237 - id236
+id238 = id237 < id233
+if0 id238 goto array_err
+id238 = id233 < id235
+if0 id238 goto array_err
+id239 = 4
+id240 = id233 + id236
+id240 = id240 * id239
+id241 = id232 + id240
+[id241 + 0] = id234
+id242 = [this + 4]
+id243 = 4
+id244 = 2
+if0 id242 goto null_err
+id245 = [id242 + 0]
+id246 = 1
+id247 = 0
+id247 = id247 - id246
+id248 = id247 < id243
+if0 id248 goto array_err
+id248 = id243 < id245
+if0 id248 goto array_err
+id249 = 4
+id250 = id243 + id246
+id250 = id250 * id249
+id251 = id242 + id250
+[id251 + 0] = id244
+id252 = [this + 4]
+id253 = 5
+id254 = 11
+if0 id252 goto null_err
+id255 = [id252 + 0]
+id256 = 1
+id257 = 0
+id257 = id257 - id256
+id258 = id257 < id253
+if0 id258 goto array_err
+id258 = id253 < id255
+if0 id258 goto array_err
+id259 = 4
+id260 = id253 + id256
+id260 = id260 * id259
+id261 = id252 + id260
+[id261 + 0] = id254
+id262 = [this + 4]
+id263 = 6
+id264 = 6
+if0 id262 goto null_err
+id265 = [id262 + 0]
+id266 = 1
+id267 = 0
+id267 = id267 - id266
+id268 = id267 < id263
+if0 id268 goto array_err
+id268 = id263 < id265
+if0 id268 goto array_err
+id269 = 4
+id270 = id263 + id266
+id270 = id270 * id269
+id271 = id262 + id270
+[id271 + 0] = id264
+id272 = [this + 4]
+id273 = 7
+id274 = 9
+if0 id272 goto null_err
+id275 = [id272 + 0]
+id276 = 1
+id277 = 0
+id277 = id277 - id276
+id278 = id277 < id273
+if0 id278 goto array_err
+id278 = id273 < id275
+if0 id278 goto array_err
+id279 = 4
+id280 = id273 + id276
+id280 = id280 * id279
+id281 = id272 + id280
+[id281 + 0] = id274
+id282 = [this + 4]
+id283 = 8
+id284 = 19
+if0 id282 goto null_err
+id285 = [id282 + 0]
+id286 = 1
+id287 = 0
+id287 = id287 - id286
+id288 = id287 < id283
+if0 id288 goto array_err
+id288 = id283 < id285
+if0 id288 goto array_err
+id289 = 4
+id290 = id283 + id286
+id290 = id290 * id289
+id291 = id282 + id290
+[id291 + 0] = id284
+id292 = [this + 4]
+id293 = 9
+id294 = 5
+if0 id292 goto null_err
+id295 = [id292 + 0]
+id296 = 1
+id297 = 0
+id297 = id297 - id296
+id298 = id297 < id293
+if0 id298 goto array_err
+id298 = id293 < id295
+if0 id298 goto array_err
+id299 = 4
+id300 = id293 + id296
+id300 = id300 * id299
+id301 = id292 + id300
+[id301 + 0] = id294
+id302 = 0
+goto QSInit_end
+null_err:
+error("null pointer")
+array_err:
+error("array index out of bounds 5")
+QSInit_end:
+      return id302
+
+

@@ -133,10 +133,12 @@ class List{
 		ret_val = true ;
 		if (aux04 < 0) { 
 		    // delete first element
+			System.out.println(1);
 		    my_head = aux01.GetNext() ;
 		} 
 		else{ // delete a non first element
 		    System.out.println(0-555);
+			// aux05 = prev.SetNext(1);
 		    aux05 = prev.SetNext(aux01.GetNext());
 		    System.out.println(0-555);
 		    

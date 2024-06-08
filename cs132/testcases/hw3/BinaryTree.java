@@ -27,14 +27,16 @@ class BT {
 	ntb = root.Insert(28) ;
 	ntb = root.Insert(14) ;
 	ntb = root.Print();
+	System.out.println(999);
 	System.out.println(root.Search(24));
 	System.out.println(root.Search(12));
 	System.out.println(root.Search(16));
 	System.out.println(root.Search(50));
 	System.out.println(root.Search(12));
-	ntb = root.Delete(12);
+	System.out.println(999);
+	ntb = root.Delete(12); // stuck here so the delete didn't happen
 	ntb = root.Print();
-	System.out.println(root.Search(12));
+	System.out.println(root.Search(12)); // bc it still has it
 
 	return 0 ;
     }
@@ -166,39 +168,80 @@ class Tree{
 	boolean is_root ;
 	int key_aux ;
 	boolean ntb ;
+	int temp;
 
 	current_node = this ;
+	System.out.println(current_node.GetKey());
 	parent_node = this ;
 	cont = true ;
 	found = false ;
 	is_root = true ;
+	
+
 	while (cont){
+		System.out.println(7);
+		temp = 1;
+		System.out.println(temp);
 	    key_aux = current_node.GetKey();
-	    if (v_key < key_aux)
-		if (current_node.GetHas_Left()){
-		    parent_node = current_node ;
-		    current_node = current_node.GetLeft() ;
-		}
-		else cont = false ;
+	    if (v_key < key_aux) 
+			if (current_node.GetHas_Left()){
+				System.out.println(111);
+				parent_node = current_node ;
+				current_node = current_node.GetLeft() ;
+				// System.out.println(current_node.GetKey());
+				temp = parent_node.GetKey();
+				System.out.println(temp);
+				temp = current_node.GetKey();
+				System.out.println(temp);
+			}
+		
+			else cont = false ;
 	    else 
 		if (key_aux < v_key)
 		    if (current_node.GetHas_Right()){
-			parent_node = current_node ;
-			current_node = current_node.GetRight() ;
+				System.out.println(222);
+				temp = parent_node.GetKey();
+				System.out.println(temp);
+				temp = current_node.GetKey();
+				System.out.println(temp);
+				parent_node = current_node ;
+				current_node = current_node.GetRight() ;
+				// System.out.println(current_node.GetKey());
+				System.out.println(222222);
+				temp = parent_node.GetKey();
+				System.out.println(temp);
+				temp = current_node.GetKey();
+				System.out.println(temp);
 		    }
 		    else cont = false ;
 		else { 
-		    if (is_root) 
-			if ((!current_node.GetHas_Right()) && 
-			    (!current_node.GetHas_Left()) )
-			    ntb = true ;
-			else 
-			    ntb = this.Remove(parent_node,current_node); 
-		    else ntb = this.Remove(parent_node,current_node);
-		    found = true ;
+			System.out.println(333);
+		    if (is_root) {
+				if ((!current_node.GetHas_Right()) && 
+					(!current_node.GetHas_Left()) )
+					ntb = true ;
+				else 
+					ntb = this.Remove(parent_node,current_node);
+			}
+		    else {
+				System.out.println(555);
+				temp = parent_node.GetKey();
+				System.out.println(temp);
+				temp = current_node.GetKey();
+				System.out.println(temp);
+				ntb = this.Remove(parent_node,current_node);
+			}
+			found = true ;
 		    cont = false ;
 		}
 	    is_root = false ;
+	}
+	System.out.println(0);
+	if(found) {
+		System.out.println(111); // means we found it
+	}
+	else {
+		System.out.println(222);
 	}
 	return found ;
     }
@@ -210,16 +253,27 @@ class Tree{
 	boolean ntb ;
 	int auxkey1 ;
 	int auxkey2 ;
+	int temp;
 	
-	if (c_node.GetHas_Left()) 
+	if (c_node.GetHas_Left())  {
+		System.out.println(777);
 	    ntb = this.RemoveLeft(p_node,c_node) ;
-	else 
-	    if (c_node.GetHas_Right())
-		ntb = this.RemoveRight(p_node,c_node) ;
+	}
+	else {
+	    if (c_node.GetHas_Right()) {
+			System.out.println(888);
+			temp = p_node.GetKey();
+			System.out.println(temp);
+			temp = c_node.GetKey();
+			System.out.println(temp);
+			ntb = this.RemoveRight(p_node,c_node) ;
+		}
+		
 	    else {
 		auxkey1 = c_node.GetKey();
 		//auxtree01 = p_node.GetLeft() ;
 		//auxkey2 = auxtree01.GetKey() ;
+		System.out.println(888);
 		auxkey2 = (p_node.GetLeft()).GetKey() ;
 		if (this.Compare(auxkey1,auxkey2)) {
 		    ntb = p_node.SetLeft(my_null);
@@ -230,6 +284,7 @@ class Tree{
 		    ntb = p_node.SetHas_Right(false);
 		}
 	    }
+	}
 	return true ;
     }
 
@@ -239,14 +294,34 @@ class Tree{
     // right subtree
     public boolean RemoveRight(Tree p_node, Tree c_node){
 	boolean ntb ;
+	int temp;
 
 	while (c_node.GetHas_Right()){
 	    //auxtree01 = c_node.GetRight() ;
 	    //auxint02 = auxtree01.GetKey();
 	    //ntb = c_node.SetKey(auxint02);
+		System.out.println(999);
+		temp = p_node.GetKey();
+		System.out.println(temp);
+		temp = c_node.GetKey();
+		System.out.println(temp);
+		System.out.println(0);
+		temp = (c_node.GetRight()).GetKey();
+		System.out.println(temp);
+		// ntb = c_node.SetKey(temp);
+		System.out.println(9990);
 	    ntb = c_node.SetKey((c_node.GetRight()).GetKey());
-	    p_node = c_node ;
+		System.out.println(9900);
+	    // temp = c_node.GetKey();
+		// System.out.println(temp);
+		System.out.println(0);
+		p_node = c_node ;
 	    c_node = c_node.GetRight() ;
+		System.out.println(1010);
+		temp = p_node.GetKey();
+		System.out.println(temp);
+		temp = c_node.GetKey();
+		System.out.println(temp);
 	}
 	ntb = p_node.SetRight(my_null);
 	ntb = p_node.SetHas_Right(false);
